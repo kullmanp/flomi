@@ -1,2 +1,14 @@
 Service-Component: *
 Private-Package: org.example
+
+# 
+# Required by JPA, defines the persistence unit
+# 
+
+Meta-Persistence: persistence.xml
+
+-includeresource: \
+	{${Meta-Persistence}}
+
+DynamicImport-Package: *
+Export-Package: ch.kup.flomi.domain

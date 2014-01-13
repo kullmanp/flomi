@@ -1,5 +1,7 @@
 -buildpath: osgi.core,\
 	osgi.cmpn,\
 	biz.aQute.bnd.annotation,\
-	junit.osgi
+	junit.osgi,\
+	javax.persistence;version=2.1,\
+	osgi.enterprise;version=5.0
 -sub: *.bnd
