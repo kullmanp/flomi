@@ -1,5 +1,11 @@
 Service-Component: *
+-buildpath: osgi.core,\
+	osgi.cmpn,\
+	biz.aQute.bnd.annotation,\
+	junit.osgi,\
+	javax.persistence;version=2.1
 Private-Package: org.example
+Export-Package: ch.kup.flomi.domain
 
 # 
 # Required by JPA, defines the persistence unit
@@ -11,4 +17,3 @@ Meta-Persistence: persistence.xml
 	{${Meta-Persistence}}
 
 DynamicImport-Package: *
-Export-Package: ch.kup.flomi.domain
