@@ -1,11 +1,12 @@
--runfw: org.apache.felix.framework;version='[4,5)'
--runee: JavaSE-1.6
+-runfw:org.apache.felix.framework;version='[4,5)'
+-runee:JavaSE-1.7
 -runsystemcapabilities: ${native_capability}
 
 -resolve.effective: active
 
 -runbundles: \
 	ch.kup.flomi.domain;version=latest,\
+	ch.kup.flomi.domain.jpatests;version=latest,\
 	com.springsource.com.mysql.jdbc;version='[5.1.6,5.1.7)',\
 	com.springsource.org.apache.commons.logging;version='[1.1.1,1.1.2)',\
 	javax.persistence;version='[2.1.0,2.1.1)',\
@@ -34,4 +35,6 @@
 	osgi.identity;filter:='(osgi.identity=org.eclipse.persistence.asm)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.persistence.core)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.persistence.jpa)',\
-	osgi.identity;filter:='(osgi.identity=org.eclipse.persistence.jpa.jpql)'
+	osgi.identity;filter:='(osgi.identity=org.eclipse.persistence.jpa.jpql)',\
+	osgi.identity;filter:='(osgi.identity=ch.kup.flomi.domain.jpatests)'
+	

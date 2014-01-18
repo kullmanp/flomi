@@ -1,0 +1,11 @@
+Service-Component: \
+	*
+-buildpath: \
+	osgi.core,\
+	osgi.cmpn,\
+	biz.aQute.bnd.annotation,\
+	javax.persistence;version=2.1,\
+	ch.kup.flomi.domain;version=latest
+Bundle-Version:0.0.0.${tstamp}
+Private-Package: \
+	testjpa
