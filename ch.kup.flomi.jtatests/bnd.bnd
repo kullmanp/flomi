@@ -10,3 +10,7 @@ Service-Component: \
 Bundle-Version:0.0.0.${tstamp}
 Private-Package: \
 	ch.kup.flomi.jtatests
+	
+-includeresource: \
+	{configuration=configuration}
+

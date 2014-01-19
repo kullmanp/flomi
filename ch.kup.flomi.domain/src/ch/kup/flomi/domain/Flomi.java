@@ -10,7 +10,7 @@ public class Flomi {
 	@Id
 	@GeneratedValue
 	private Long id;
-
+ 
 	private String name;
 
 	public String getName() {
@@ -23,6 +23,14 @@ public class Flomi {
 
 	@Override
 	public String toString() {
-		return "Flomi[" + id + ", name=" + name + "]";
+		return "Flomi[" + getId() + ", name=" + name + "]";
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 }

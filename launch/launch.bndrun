@@ -15,47 +15,51 @@
 
 
 -runbundles: \
+	aQute.configurer;version='[1.0.1,1.0.2)',\
+	aQute.logger.intrf;version='[1.0.0,1.0.1)',\
 	ch.kup.flomi.domain;version=latest,\
-	ch.kup.flomi.domain.jpatests;version=latest,\
 	ch.kup.flomi.integration;version=latest,\
 	ch.kup.flomi.integration.impl;version=latest,\
 	ch.kup.flomi.jtatests;version=latest,\
-	com.springsource.com.mysql.jdbc;version='[5.1.6,5.1.7)',\
-	com.springsource.org.apache.commons.logging;version='[1.1.1,1.1.2)',\
+	com.mysql.jdbc;version='[5.1.27,5.1.28)',\
 	javax.persistence;version='[2.1.0,2.1.1)',\
+	javax.servlet;version='[2.5.0,2.5.1)',\
 	org.apache.felix.configadmin;version='[1.8.0,1.8.1)',\
 	org.apache.felix.gogo.command;version='[0.12.0,0.12.1)',\
 	org.apache.felix.gogo.runtime;version='[0.10.0,0.10.1)',\
 	org.apache.felix.gogo.shell;version='[0.10.0,0.10.1)',\
+	org.apache.felix.http.jetty;version='[2.2.2,2.2.3)',\
 	org.apache.felix.log;version='[1.0.1,1.0.2)',\
 	org.apache.felix.scr;version='[1.6.2,1.6.3)',\
+	org.apache.felix.webconsole;version='[3.1.8,3.1.9)',\
 	org.apache.geronimo.specs.geronimo-j2ee-connector_1.6_spec;version='[1.0.0,1.0.1)',\
 	org.apache.geronimo.specs.geronimo-jta_1.1_spec;version='[1.1.1,1.1.2)',\
-	org.eclipse.gemini.jpa;version='[1.2.0,1.2.1)',\
 	org.eclipse.persistence.antlr;version='[3.2.0,3.2.1)',\
 	org.eclipse.persistence.asm;version='[3.3.1,3.3.2)',\
 	org.eclipse.persistence.core;version='[2.5.1,2.5.2)',\
 	org.eclipse.persistence.jpa;version='[2.5.1,2.5.2)',\
 	org.eclipse.persistence.jpa.jpql;version='[2.5.1,2.5.2)',\
+	org.ops4j.pax.jdbc.mysql;version='[0.3.0,0.3.1)',\
 	org.ow2.bundles.ow2-util-log;version='[1.0.36,1.0.37)',\
 	org.ow2.jotm.core;version='[2.3.1,2.3.2)',\
 	org.ow2.util.i18n;version='[2.0.0,2.0.1)',\
 	osgi.cmpn;version='[5.0.0,5.0.1)',\
 	osgi.enterprise;version='[4.2.0,4.2.1)',\
-	osgi.jta.jotm.adapter;version='[1.0.0,1.0.1)'
+	osgi.jdbc.managed.aux;version='[1.0.0,1.0.1)',\
+	osgi.jpa.managed.aux;version='[2.0.1,2.0.2)',\
+	osgi.jpa.managed.eclipselink.adapter;version='[1.0.0,1.0.1)',\
+	osgi.jta.jotm.adapter;version='[1.0.0,1.0.1)',\
+	osgi.residential;version='[4.3.0,4.3.1)'
 
 -runrequires: \
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
 	osgi.identity;filter:='(osgi.identity=ch.kup.flomi.domain)',\
-	osgi.identity;filter:='(osgi.identity=com.springsource.com.mysql.jdbc)',\
-	osgi.identity;filter:='(osgi.identity=org.eclipse.gemini.jpa)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.persistence.antlr)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.persistence.asm)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.persistence.core)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.persistence.jpa)',\
 	osgi.identity;filter:='(osgi.identity=org.eclipse.persistence.jpa.jpql)',\
-	osgi.identity;filter:='(osgi.identity=ch.kup.flomi.domain.jpatests)',\
 	osgi.identity;filter:='(osgi.identity=org.ow2.jotm.core)',\
 	osgi.identity;filter:='(osgi.identity=osgi.jta.jotm.adapter)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.geronimo.specs.geronimo-jta_1.1_spec)',\
@@ -64,5 +68,15 @@
 	osgi.identity;filter:='(osgi.identity=org.apache.geronimo.specs.geronimo-j2ee-connector_1.6_spec)',\
 	osgi.identity;filter:='(osgi.identity=ch.kup.flomi.jtatests)',\
 	osgi.identity;filter:='(osgi.identity=ch.kup.flomi.integration)',\
-	osgi.identity;filter:='(osgi.identity=ch.kup.flomi.integration.impl)'
+	osgi.identity;filter:='(osgi.identity=ch.kup.flomi.integration.impl)',\
+	osgi.identity;filter:='(osgi.identity=osgi.jpa.managed.aux)',\
+	osgi.identity;filter:='(osgi.identity=osgi.jpa.managed.eclipselink.adapter)',\
+	osgi.identity;filter:='(osgi.identity=aQute.logger.intrf)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.webconsole)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.configadmin)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.http.jetty)',\
+	osgi.identity;filter:='(osgi.identity=aQute.configurer)',\
+	osgi.identity;filter:='(osgi.identity=osgi.jdbc.managed.aux)',\
+	osgi.identity;filter:='(osgi.identity=org.ops4j.pax.jdbc.mysql)',\
+	osgi.identity;filter:='(osgi.identity=com.mysql.jdbc)'
 	
