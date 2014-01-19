@@ -4,7 +4,6 @@ Service-Component: *
 	biz.aQute.bnd.annotation,\
 	junit.osgi,\
 	javax.persistence;version=2.1
-Private-Package: org.example
 Export-Package: ch.kup.flomi.domain
 
 # 

@@ -1,0 +1,6 @@
+Export-Package: \
+	ch.kup.flomi.integration
+-buildpath: \
+	biz.aQute.bnd.annotation,\
+	ch.kup.flomi.domain;version=latest
+Bundle-Version:1.0.0

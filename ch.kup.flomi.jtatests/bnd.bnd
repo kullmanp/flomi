@@ -1,0 +1,12 @@
+Service-Component: \
+	*
+-buildpath: \
+	osgi.core,\
+	osgi.cmpn,\
+	biz.aQute.bnd.annotation,\
+	org.apache.geronimo.specs.geronimo-jta_1.1_spec,\
+	ch.kup.flomi.domain;version=latest,\
+	ch.kup.flomi.integration;version=latest
+Bundle-Version:0.0.0.${tstamp}
+Private-Package: \
+	ch.kup.flomi.jtatests
