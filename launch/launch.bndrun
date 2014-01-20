@@ -58,7 +58,8 @@
 	org.amdatu.web.rest.wink;version='[1.0,1.1)',\
 	jackson-jaxrs;version=1.9.8,\
 	jackson-core-asl;version=1.9.8,\
-	jackson-mapper-asl;version=1.9.8
+	jackson-mapper-asl;version=1.9.8,\
+	osgi.jta.filter.aux
 
 -runrequires: \
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\

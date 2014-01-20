@@ -10,6 +10,8 @@
         "service.pid" : "Wildcard",
         "name" : "*"
     }, {
+            "service.pid" : "osgi.jta.filter.aux.JTACoordinator"
+    }, {
         "service.factoryPid" : "osgi.jdbc.managed.aux.XADataSourceFactory",
         "service.pid" : "MySQL Data Source",
         "url" : "jdbc:mysql://localhost:3306/flomi",
