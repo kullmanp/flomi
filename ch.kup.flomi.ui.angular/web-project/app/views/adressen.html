@@ -1,0 +1,23 @@
+<div class="header">
+	<ul class="nav nav-pills pull-right">
+		<li><a ng-href="#">Home</a></li>
+		<li class="active"><a ng-href="#adressen">Adressen</a></li>
+		<li><a ng-href="#">About</a></li>
+		<li><a ng-href="#">Contact</a></li>
+	</ul>
+	<h3 class="text-muted">Flomi</h3>
+</div>
+
+<div class="container">
+	<ul class="addresses">
+		<li ng-repeat="address in addresses">
+			<div>
+				<a ng-href="/#/address/{{address.id}}">{{address.shortform}}</a>
+			</div>
+		</li>
+	</ul>
+</div>
+
+<div class="footer">
+	<p>(c) Flomi</p>
+</div>

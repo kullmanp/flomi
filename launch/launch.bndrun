@@ -59,7 +59,9 @@
 	jackson-jaxrs;version=1.9.8,\
 	jackson-core-asl;version=1.9.8,\
 	jackson-mapper-asl;version=1.9.8,\
-	osgi.jta.filter.aux
+	osgi.jta.filter.aux,\
+	ch.kup.flomi.ui.angular;version=latest,\
+	org.amdatu.web.resourcehandler
 
 -runrequires: \
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
@@ -92,7 +94,9 @@
 	osgi.identity;filter:='(osgi.identity=aQute.configurer)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.http.whiteboard)',\
 	osgi.identity;filter:='(osgi.identity=org.amdatu.web.rest.jaxrs)',\
-	osgi.identity;filter:='(osgi.identity=org.amdatu.web.rest.wink)'
+	osgi.identity;filter:='(osgi.identity=org.amdatu.web.rest.wink)',\
+	osgi.identity;filter:='(osgi.identity=ch.kup.flomi.ui.angular)',\
+	osgi.identity;filter:='(osgi.identity=org.amdatu.web.resourcehandler)'
 	osgi.identity;filter:='(osgi.identity=ch.kup.flomi.domain)',\
 	osgi.identity;filter:='(osgi.identity=ch.kup.flomi.jtatests)',\
 	osgi.identity;filter:='(osgi.identity=ch.kup.flomi.integration)',\

@@ -4,11 +4,12 @@ import javax.persistence.EntityManager;
 
 import aQute.bnd.annotation.component.Component;
 import aQute.bnd.annotation.component.Reference;
-import ch.kup.flomi.domain.Flomi;
-import ch.kup.flomi.integration.FlomiRepository;
+import ch.kup.flomi.domain.Address;
+import ch.kup.flomi.integration.AddressRepository;
 
 @Component
-public class FlomiRepositoryImpl extends BaseRepository<Flomi, Long> implements FlomiRepository {
+public class AddressRepositoryImpl extends BaseRepository<Address, Long>
+		implements AddressRepository {
 
 	@Reference
 	public void setEM(EntityManager em) {
