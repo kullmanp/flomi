@@ -1,0 +1,15 @@
+<a href="#/flomis/add" class="btn">Neuer Flomi</a>
+
+<table class="table table-striped table-bordered">
+	<tr>
+		<th>Name</th>		
+		<th>Datum</th>
+		<th></th>
+	</tr>
+	<tr ng-repeat="flomi in flomis">
+		<td>{{flomi.name}}</td>
+		<td>{{flomi.date}}</td>
+		<td><a href="#/flomis/edit/{{flomi._id}}" class="btn">Ändern</a></td>
+	</tr>
+</table>
+

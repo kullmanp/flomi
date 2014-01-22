@@ -1,15 +1,4 @@
-Service-Component: \
-	*
--buildpath: \
-	osgi.core,\
-	osgi.cmpn,\
-	biz.aQute.bnd.annotation
-Bundle-Version:0.0.0.${tstamp}
-Private-Package: \
-	org.example
-	
--includeresource: web=web-project/app
-
+Include-Resource: web=web-project
+X-Web-Resource: /web
 X-Web-Resource-Version: 1.0
-X-Web-Resource: web
-
+ 
