@@ -5,14 +5,13 @@ import java.util.UUID;
 
 import javax.transaction.TransactionManager;
 
+import aQute.bnd.annotation.component.Reference;
 import ch.kup.flomi.domain.Address;
 import ch.kup.flomi.domain.Flomi;
 import ch.kup.flomi.integration.AddressRepository;
 import ch.kup.flomi.integration.FlomiRepository;
-import aQute.bnd.annotation.component.Component;
-import aQute.bnd.annotation.component.Reference;
 
-@Component
+// @Component
 public class JtaTest {
 	private TransactionManager tm;
 
@@ -56,7 +55,7 @@ public class JtaTest {
 
 	private void createTestAddresses() {
 		Address address = new Address();
-		address.setFirstName("Test"); 
+		address.setFirstName("Test");
 		address.setLastName(UUID.randomUUID().toString());
 		address.setZip("8000");
 		addressRepository.persist(address);

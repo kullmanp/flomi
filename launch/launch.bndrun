@@ -61,7 +61,9 @@
 	jackson-mapper-asl;version=1.9.8,\
 	osgi.jta.filter.aux,\
 	ch.kup.flomi.ui.angular;version=latest,\
-	org.amdatu.web.resourcehandler
+	org.amdatu.web.resourcehandler,\
+	ch.kup.flomi.datamigration;version=latest,\
+	ch.kup.flomi.odb.driver;version=latest
 
 -runrequires: \
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\

@@ -14,7 +14,7 @@
     }, {
         "service.factoryPid" : "osgi.jdbc.managed.aux.XADataSourceFactory",
         "service.pid" : "MySQL Data Source",
-        "url" : "jdbc:mysql://localhost:3306/flomi",
+        "url" : "jdbc:mysql://localhost:3306/flomi?createDatabaseIfNotExist=true",
         "user" : "root",
         ".password" : "root",
         "dataSourceFactory.target" : "(osgi.jdbc.driver.class=com.mysql.jdbc.Driver)"

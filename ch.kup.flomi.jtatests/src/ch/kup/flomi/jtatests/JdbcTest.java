@@ -7,10 +7,9 @@ import java.sql.Statement;
 import javax.sql.XAConnection;
 import javax.sql.XADataSource;
 
-import aQute.bnd.annotation.component.Component;
 import aQute.bnd.annotation.component.Reference;
 
-@Component
+// @Component
 public class JdbcTest {
 
 	private XADataSource ds;
@@ -19,14 +18,15 @@ public class JdbcTest {
 		return ds;
 	}
 
-	public void activate()  {
-		try { 
+	public void activate() {
+		try {
 			System.out.println("XA Datasource: " + ds);
 			XAConnection xaConnection = ds.getXAConnection();
 			System.out.println(xaConnection);
 			Connection connection = xaConnection.getConnection();
 			Statement statement = connection.createStatement();
-			ResultSet resultSet = statement.executeQuery("select * from flomi.FLOMI");
+			ResultSet resultSet = statement
+					.executeQuery("select * from flomi.FLOMI");
 			while (resultSet.next()) {
 				System.out.println("RESULT: " + resultSet.toString());
 			}
@@ -41,4 +41,4 @@ public class JdbcTest {
 	public void setDs(XADataSource ds) {
 		this.ds = ds;
 	}
-} 
+}
