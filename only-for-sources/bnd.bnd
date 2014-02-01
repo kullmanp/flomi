@@ -1,0 +1,18 @@
+Service-Component: \
+	*
+-buildpath: \
+	osgi.core,\
+	osgi.cmpn,\
+	biz.aQute.bnd.annotation,\
+	org.eclipse.persistence.antlr,\
+	org.eclipse.persistence.asm,\
+	org.eclipse.persistence.core,\
+	org.eclipse.persistence.jpa,\
+	org.eclipse.persistence.jpa.jpql,\
+	osgi.jpa.managed.eclipselink.adapter,\
+	org.ow2.jotm.core,\
+	org.amdatu.web.rest.wink,\
+	osgi.jta.filter.aux
+Bundle-Version:0.0.0.${tstamp}
+Private-Package: \
+	org.example

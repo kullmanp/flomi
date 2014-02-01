@@ -1,0 +1,12 @@
+[ 
+    {
+        "service.factoryPid" : "osgi.jpa.managed.aux.JPAManager",
+        "service.pid" : "Wildcard",
+        "name" : "*"
+    }, {
+        "service.factoryPid" : "osgi.jdbc.managed.aux.XADataSourceFactory",
+        "service.pid" : "H2 Data Source",
+        "url" : "jdbc:h2:mem:db",
+        "dataSourceFactory.target" : "(osgi.jdbc.driver.class=org.h2.Driver)"
+    }
+]

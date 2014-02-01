@@ -1,0 +1,107 @@
+<form class="form-horizontal">
+  <div class="control-group">
+    <label class="control-label" for="inputID">ID</label>
+    <div class="controls">
+      <input type="text" id="inputID" placeholder="ID" ng-model="address.id">
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="inputSalutation">Anrede</label>
+    <div class="controls">
+      <input type="text" id="inputSalutation" placeholder="Anrede" ng-model="address.salutation">
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="inputTitle">Titel</label>
+    <div class="controls">
+      <input type="text" id="inputTitle" ng-model="address.title">
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="inputFirstName">Vorname</label>
+    <div class="controls">
+      <input type="text" id="inputFirstName" placeholder="Vorname" ng-model="address.firstName">
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="inputLastName">Nachname</label>
+    <div class="controls">
+      <input type="text" id="inputLastName" placeholder="Nachname" ng-model="address.lastName">
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="inputAddress">Adresse</label>
+    <div class="controls">
+      <input type="text" id="inputAddress" placeholder="Adresse" ng-model="address.address">
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="inputAddress2">Adresse2</label>
+    <div class="controls">
+      <input type="text" id="inputAddress2" placeholder="Adresse2" ng-model="address.address2">
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="inputZip">PLZ</label>
+    <div class="controls">
+      <input type="text" id="inputZip" placeholder="PLZ" ng-model="address.zip">
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="inputCity">Ort</label>
+    <div class="controls">
+      <input type="text" id="inputCity" placeholder="Ort" ng-model="address.city">
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="inputCountry">Land</label>
+    <div class="controls">
+      <input type="text" id="inputCountry" placeholder="Land" ng-model="address.country">
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="inputPhone">Telefon privat</label>
+    <div class="controls">
+      <input type="text" id="inputPhone" placeholder="Telefon privat" ng-model="address.phone">
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="inputMobilePhone">Handy</label>
+    <div class="controls">
+      <input type="text" id="inputMobilePhone" placeholder="Handy" ng-model="address.mobilePhone">
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="inputEmail">E-Mail</label>
+    <div class="controls">
+      <input type="text" id="inputEmail" placeholder="E-Mail" ng-model="address.email">
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="inputBirthday">Geburtsdatum</label>
+    <div class="controls">
+      <input type="text" id="inputBirthday" placeholder="Geburtsdatum" ng-model="address.birthday">
+    </div>
+  </div>
+
+  <div class="control-group">
+    <div class="controls">
+      <div class="btn btn-primary" ng-click="save()">Save</div>
+      <div class="btn btn-danger" ng-click="delete()">Delete</div>
+      <a href="#/addresses" class="btn">Cancel</a>
+    </div>
+  </div>
+</form>

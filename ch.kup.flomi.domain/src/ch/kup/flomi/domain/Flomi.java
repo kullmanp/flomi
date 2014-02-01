@@ -9,11 +9,20 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-public class Flomi {
-
+public class Flomi extends TrackedEntity<Long> {
 	@Id
 	@GeneratedValue
 	private Long id;
+
+	@Override
+	public Long getId() {
+		return id;
+	}
+
+	@Override
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	private String name;
 
@@ -33,14 +42,6 @@ public class Flomi {
 		return "Flomi[" + getId() + ", name=" + name + "]";
 	}
 
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
 	public Date getDate() {
 		return date;
 	}
@@ -48,4 +49,5 @@ public class Flomi {
 	public void setDate(Date date) {
 		this.date = date;
 	}
+
 }

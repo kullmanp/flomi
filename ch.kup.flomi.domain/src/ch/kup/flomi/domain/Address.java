@@ -5,13 +5,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Address {
+public class Address extends TrackedEntity<Long> {
 	@Id
 	@GeneratedValue
 	private Long id;
 
 	private String salutation;
 	private String title;
+
 	private String lastName;
 	private String firstName;
 	private String address;
@@ -19,14 +20,12 @@ public class Address {
 	private String zip;
 	private String city;
 	private String country;
-
 	private String email;
 	private String phone;
+
 	private String mobilePhone;
 	private String fax;
-
 	private String birthday;
-
 	private String carNumber;
 
 	public String getAddress() {
@@ -65,6 +64,7 @@ public class Address {
 		return firstName;
 	}
 
+	@Override
 	public Long getId() {
 		return id;
 	}
@@ -120,6 +120,7 @@ public class Address {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
 	public void setFax(String fax) {
 		this.fax = fax;
 	}
@@ -128,6 +129,7 @@ public class Address {
 		this.firstName = firstName;
 	}
 
+	@Override
 	public void setId(Long id) {
 		this.id = id;
 	}

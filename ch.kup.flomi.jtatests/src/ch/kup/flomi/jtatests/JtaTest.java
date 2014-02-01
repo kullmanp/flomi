@@ -34,7 +34,7 @@ public class JtaTest {
 		try {
 			Flomi newFlomi = new Flomi();
 			newFlomi.setName("JTA FLOMI 2");
-			flomiRepository.persist(newFlomi);
+			flomiRepository.save(newFlomi);
 			createTestAddresses();
 
 			List<Flomi> findAll = flomiRepository.findAll();
@@ -58,7 +58,7 @@ public class JtaTest {
 		address.setFirstName("Test");
 		address.setLastName(UUID.randomUUID().toString());
 		address.setZip("8000");
-		addressRepository.persist(address);
+		addressRepository.save(address);
 	}
 
 	public FlomiRepository getFlomiRepository() {

@@ -1,0 +1,26 @@
+-buildpath: \
+	osgi.core;version='[4.2,5)',\
+	osgi.cmpn,\
+	org.mockito.mockito-all,\
+	org.amdatu.bndtools.test,\
+	ch.kup.flomi.integration;version=latest,\
+	org.apache.felix.dependencymanager,\
+	ch.kup.flomi.domain;version=latest,\
+	ch.kup.flomi.integration.impl;version=latest,\
+	com.springsource.org.junit,\
+	org.apache.geronimo.specs.geronimo-jta_1.1_spec
+Test-Cases: \
+	${classes;ANNOTATION;org.junit.Test}
+-runvm:-ea
+Bundle-Version:0.0.0.${tstamp}
+-runbundles: \
+	org.mockito.mockito-all
+-runfw:org.apache.felix.framework
+-runee:JavaSE-1.6
+Private-Package: \
+	ch.kup.flomi.integration.impl.test
+-runsystempackages: \
+	sun.reflect
+	
+-includeresource: \
+	{configuration=configuration}

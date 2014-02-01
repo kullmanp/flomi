@@ -1,0 +1,128 @@
+
+<testsuite name='test.ch.kup.flomi.integration.impl.test' tests='2' time='10.50' failures='1' skipped='0' target='reference:file:/Users/kup/eclipse/ws-flomi/flomi/ch.kup.flomi.integration.impl.test/generated/ch.kup.flomi.integration.impl.test.jar' timestamp='2014-02-01T15:01:17' hostname='peter-kullmanns-macbook-pro-5.local' framework='org.apache.felix.framework [0]' errors='0' framework-version='4.2.1'>
+  <properties>
+    <property name='java.vendor' value='Oracle Corporation'/>
+    <property name='sun.java.launcher' value='SUN_STANDARD'/>
+    <property name='sun.management.compiler' value='HotSpot 64-Bit Tiered Compilers'/>
+    <property name='os.name' value='Mac OS X'/>
+    <property name='sun.boot.class.path' value='/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/JObjC.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/classes'/>
+    <property name='tester.continuous' value='true'/>
+    <property name='user.country.format' value='CH'/>
+    <property name='java.vm.specification.vendor' value='Oracle Corporation'/>
+    <property name='java.runtime.version' value='1.7.0_45-b18'/>
+    <property name='launch.services' value='true'/>
+    <property name='launcher.properties' value='/Users/kup/eclipse/ws-flomi/flomi/ch.kup.flomi.integration.impl.test/generated/launch4050616317795272088.properties'/>
+    <property name='user.name' value='kup'/>
+    <property name='launch.bundles' value='/Users/kup/.bnd/cache/https%3A%2F%2Fgithub.com%2Fbndtools%2Fbundle-hub%2Fraw%2Fmaster%2Fbiz.aQute.junit/biz.aQute.junit-1.2.0.jar,/Users/kup/eclipse/ws-flomi/flomi/ch.kup.flomi.domain/generated/ch.kup.flomi.domain.jar,/Users/kup/eclipse/ws-flomi/flomi/ch.kup.flomi.integration/generated/ch.kup.flomi.integration.jar,/Users/kup/eclipse/ws-flomi/flomi/ch.kup.flomi.integration.impl.test/generated/ch.kup.flomi.integration.impl.test.jar,/Users/kup/eclipse/ws-flomi/flomi/cnf/localrepo/javax.persistence/javax.persistence-2.1.0.jar,/Users/kup/.bnd/cache/https%3A%2F%2Fgithub.com%2Fbndtools%2Fbundle-hub%2Fraw%2Fmaster%2Fjavax.servlet/javax.servlet-2.5.0.jar,/Users/kup/.bnd/cache/http%3A%2F%2Frepository.amdatu.org%2Fsnapshot%2Forg.amdatu.bndtools.test/org.amdatu.bndtools.test-1.0.0.jar,/Users/kup/.bnd/cache/http%3A%2F%2Frepository.amdatu.org%2Fdependencies%2Forg.apache.felix.configadmin/org.apache.felix.configadmin-1.8.0.jar,/Users/kup/eclipse/ws-flomi/flomi/cnf/localrepo/org.apache.felix.dependencymanager/org.apache.felix.dependencymanager-3.1.0.jar,/Users/kup/.bnd/cache/https%3A%2F%2Fgithub.com%2Fbndtools%2Fbundle-hub%2Fraw%2Fmaster%2Forg.apache.felix.gogo.command/org.apache.felix.gogo.command-0.12.0.jar,/Users/kup/.bnd/cache/https%3A%2F%2Fgithub.com%2Fbndtools%2Fbundle-hub%2Fraw%2Fmaster%2Forg.apache.felix.gogo.runtime/org.apache.felix.gogo.runtime-0.10.0.jar,/Users/kup/.bnd/cache/https%3A%2F%2Fgithub.com%2Fbndtools%2Fbundle-hub%2Fraw%2Fmaster%2Forg.apache.felix.gogo.shell/org.apache.felix.gogo.shell-0.10.0.jar,/Users/kup/.bnd/cache/http%3A%2F%2Frepository.amdatu.org%2Fdependencies%2Forg.apache.felix.http.jetty/org.apache.felix.http.jetty-2.2.2.jar,/Users/kup/.bnd/cache/https%3A%2F%2Fgithub.com%2Fbndtools%2Fbundle-hub%2Fraw%2Fmaster%2Forg.apache.felix.log/org.apache.felix.log-1.0.1.jar,/Users/kup/.bnd/cache/http%3A%2F%2Frepository.amdatu.org%2Fdependencies%2Forg.apache.felix.metatype/org.apache.felix.metatype-1.0.6.jar,/Users/kup/.bnd/cache/https%3A%2F%2Fgithub.com%2Fbndtools%2Fbundle-hub%2Fraw%2Fmaster%2Forg.apache.felix.scr/org.apache.felix.scr-1.6.2.jar,/Users/kup/.bnd/cache/https%3A%2F%2Fgithub.com%2Fbndtools%2Fbundle-hub%2Fraw%2Fmaster%2Forg.apache.felix.webconsole/org.apache.felix.webconsole-3.1.8.jar,/Users/kup/.bnd/cache/https%3A%2F%2Fgithub.com%2Fbndtools%2Fbundle-hub%2Fraw%2Fmaster%2Fosgi.cmpn/osgi.cmpn-5.0.0.jar,/Users/kup/.bnd/cache/https%3A%2F%2Fgithub.com%2Fbndtools%2Fbundle-hub%2Fraw%2Fmaster%2Fosgi.enterprise/osgi.enterprise-4.2.0.jar,/Users/kup/.bnd/cache/https%3A%2F%2Fgithub.com%2Fbndtools%2Fbundle-hub%2Fraw%2Fmaster%2Fosgi.residential/osgi.residential-4.3.0.jar'/>
+    <property name='tester.trace' value='true'/>
+    <property name='user.language' value='de'/>
+    <property name='sun.boot.library.path' value='/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib'/>
+    <property name='java.version' value='1.7.0_45'/>
+    <property name='user.timezone' value='Europe/Zurich'/>
+    <property name='tester.dir' value='testdir'/>
+    <property name='sun.arch.data.model' value='64'/>
+    <property name='http.nonProxyHosts' value='local|*.local|169.254/16|*.169.254/16'/>
+    <property name='java.endorsed.dirs' value='/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/endorsed'/>
+    <property name='sun.cpu.isalist' value=''/>
+    <property name='sun.jnu.encoding' value='UTF-8'/>
+    <property name='file.encoding.pkg' value='sun.io'/>
+    <property name='launch.noreferences' value='false'/>
+    <property name='file.separator' value='/'/>
+    <property name='java.specification.name' value='Java Platform API Specification'/>
+    <property name='java.class.version' value='51.0'/>
+    <property name='user.country' value='DE'/>
+    <property name='java.home' value='/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre'/>
+    <property name='java.vm.info' value='mixed mode'/>
+    <property name='os.version' value='10.9.1'/>
+    <property name='path.separator' value=':'/>
+    <property name='java.vm.version' value='24.45-b08'/>
+    <property name='java.awt.printerjob' value='sun.lwawt.macosx.CPrinterJob'/>
+    <property name='sun.io.unicode.encoding' value='UnicodeBig'/>
+    <property name='awt.toolkit' value='sun.lwawt.macosx.LWCToolkit'/>
+    <property name='socksNonProxyHosts' value='local|*.local|169.254/16|*.169.254/16'/>
+    <property name='ftp.nonProxyHosts' value='local|*.local|169.254/16|*.169.254/16'/>
+    <property name='user.home' value='/Users/kup'/>
+    <property name='java.specification.vendor' value='Oracle Corporation'/>
+    <property name='java.library.path' value='/Users/kup/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.'/>
+    <property name='java.vendor.url' value='http://java.oracle.com/'/>
+    <property name='java.vm.vendor' value='Oracle Corporation'/>
+    <property name='gopherProxySet' value='false'/>
+    <property name='java.runtime.name' value='Java(TM) SE Runtime Environment'/>
+    <property name='sun.java.command' value='aQute.launcher.Launcher'/>
+    <property name='java.class.path' value='/Users/kup/.bnd/cache/https%3A%2F%2Fgithub.com%2Fbndtools%2Fbundle-hub%2Fraw%2Fmaster%2Forg.apache.felix.framework/org.apache.felix.framework-4.2.1.jar:/Users/kup/eclipse/ws-flomi/flomi/cnf/buildrepo/biz.aQute.launcher/biz.aQute.launcher-latest.jar'/>
+    <property name='launch.system.capabilities' value='osgi.native;osgi.native.osname:List&lt;String&gt;="MacOSX,Mac OS X";osgi.native.osversion:Version=10.9.1;osgi.native.processor:List&lt;String&gt;="x86-64,amd64,em64t,x86_64"'/>
+    <property name='launch.name' value='ch.kup.flomi.integration.impl.test'/>
+    <property name='launch.timeout' value='0'/>
+    <property name='launch.storage.dir' value='/Users/kup/eclipse/ws-flomi/flomi/ch.kup.flomi.integration.impl.test/generated/fw'/>
+    <property name='launch.keep' value='false'/>
+    <property name='java.vm.specification.name' value='Java Virtual Machine Specification'/>
+    <property name='java.vm.specification.version' value='1.7'/>
+    <property name='sun.cpu.endian' value='little'/>
+    <property name='sun.os.patch.level' value='unknown'/>
+    <property name='java.io.tmpdir' value='/var/folders/91/9qzh8np162nf454ybx3jzcgm0000gn/T/'/>
+    <property name='java.vendor.url.bug' value='http://bugreport.sun.com/bugreport/'/>
+    <property name='os.arch' value='x86_64'/>
+    <property name='java.awt.graphicsenv' value='sun.awt.CGraphicsEnvironment'/>
+    <property name='java.ext.dirs' value='/Users/kup/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java'/>
+    <property name='user.dir' value='/Users/kup/eclipse/ws-flomi/flomi/ch.kup.flomi.integration.impl.test'/>
+    <property name='launch.trace' value='false'/>
+    <property name='line.separator' value='
+'/>
+    <property name='java.vm.name' value='Java HotSpot(TM) 64-Bit Server VM'/>
+    <property name='launch.embedded' value='false'/>
+    <property name='launch.activators' value=''/>
+    <property name='file.encoding' value='UTF-8'/>
+    <property name='launch.system.packages' value='sun.reflect,org.osgi.framework.startlevel;uses:="org.osgi.framework";version="1.0",org.osgi.framework.wiring;uses:="org.osgi.resource,org.osgi.framework";version="1.1",org.osgi.framework.hooks.bundle;uses:="org.osgi.framework";version="1.1",org.osgi.framework.hooks.service;uses:="org.osgi.framework";version="1.1",org.osgi.framework.hooks.resolver;uses:="org.osgi.framework.wiring";version="1.0",org.osgi.framework.namespace;uses:="org.osgi.resource";version="1.0",org.osgi.framework.launch;uses:="org.osgi.framework";version="1.1",org.osgi.framework;version="1.7",org.osgi.framework.hooks.weaving;uses:="org.osgi.framework.wiring";version="1.0",org.osgi.resource;version="1.0",org.osgi.service.url;version="1.0",org.osgi.service.packageadmin;uses:="org.osgi.framework";version="1.2",org.osgi.service.startlevel;uses:="org.osgi.framework";version="1.1",org.osgi.util.tracker;uses:="org.osgi.framework";version="1.5.1"'/>
+    <property name='java.specification.version' value='1.7'/>
+  </properties>
+  <bundles>
+    <bundle version='4.2.1' location='System Bundle' bsn='org.apache.felix.framework' modified='1970-01-01T01:00:00' state='32' id='0'/>
+    <bundle version='1.2.0.20130927-173427' location='reference:file:/Users/kup/.bnd/cache/https%253A%252F%252Fgithub.com%252Fbndtools%252Fbundle-hub%252Fraw%252Fmaster%252Fbiz.aQute.junit/biz.aQute.junit-1.2.0.jar' bsn='biz.aQute.junit' modified='2014-02-01T15:01:06' state='32' id='1'/>
+    <bundle version='0.0.0' location='reference:file:/Users/kup/eclipse/ws-flomi/flomi/ch.kup.flomi.domain/generated/ch.kup.flomi.domain.jar' bsn='ch.kup.flomi.domain' modified='2014-02-01T15:01:06' state='32' id='2'/>
+    <bundle version='1.0.0' location='reference:file:/Users/kup/eclipse/ws-flomi/flomi/ch.kup.flomi.integration/generated/ch.kup.flomi.integration.jar' bsn='ch.kup.flomi.integration' modified='2014-02-01T15:01:06' state='32' id='3'/>
+    <bundle version='0.0.0.201402011357' location='reference:file:/Users/kup/eclipse/ws-flomi/flomi/ch.kup.flomi.integration.impl.test/generated/ch.kup.flomi.integration.impl.test.jar' bsn='ch.kup.flomi.integration.impl.test' modified='2014-02-01T15:01:06' state='32' target='true' id='4'/>
+    <bundle version='2.1.0.v201304241213' location='reference:file:/Users/kup/eclipse/ws-flomi/flomi/cnf/localrepo/javax.persistence/javax.persistence-2.1.0.jar' bsn='javax.persistence' modified='2014-02-01T15:01:06' state='32' id='5'/>
+    <bundle version='2.5.0.v200910301333' location='reference:file:/Users/kup/.bnd/cache/https%253A%252F%252Fgithub.com%252Fbndtools%252Fbundle-hub%252Fraw%252Fmaster%252Fjavax.servlet/javax.servlet-2.5.0.jar' bsn='javax.servlet' modified='2014-02-01T15:01:06' state='32' id='6'/>
+    <bundle version='1.0.0' location='reference:file:/Users/kup/.bnd/cache/http%253A%252F%252Frepository.amdatu.org%252Fsnapshot%252Forg.amdatu.bndtools.test/org.amdatu.bndtools.test-1.0.0.jar' bsn='org.amdatu.bndtools.test' modified='2014-02-01T15:01:06' state='32' id='7'/>
+    <bundle version='1.8.0' location='reference:file:/Users/kup/.bnd/cache/http%253A%252F%252Frepository.amdatu.org%252Fdependencies%252Forg.apache.felix.configadmin/org.apache.felix.configadmin-1.8.0.jar' bsn='org.apache.felix.configadmin' modified='2014-02-01T15:01:06' state='32' id='8'/>
+    <bundle version='3.1.0' location='reference:file:/Users/kup/eclipse/ws-flomi/flomi/cnf/localrepo/org.apache.felix.dependencymanager/org.apache.felix.dependencymanager-3.1.0.jar' bsn='org.apache.felix.dependencymanager' modified='2014-02-01T15:01:06' state='32' id='9'/>
+    <bundle version='0.12.0' location='reference:file:/Users/kup/.bnd/cache/https%253A%252F%252Fgithub.com%252Fbndtools%252Fbundle-hub%252Fraw%252Fmaster%252Forg.apache.felix.gogo.command/org.apache.felix.gogo.command-0.12.0.jar' bsn='org.apache.felix.gogo.command' modified='2014-02-01T15:01:06' state='32' id='10'/>
+    <bundle version='0.10.0' location='reference:file:/Users/kup/.bnd/cache/https%253A%252F%252Fgithub.com%252Fbndtools%252Fbundle-hub%252Fraw%252Fmaster%252Forg.apache.felix.gogo.runtime/org.apache.felix.gogo.runtime-0.10.0.jar' bsn='org.apache.felix.gogo.runtime' modified='2014-02-01T15:01:06' state='32' id='11'/>
+    <bundle version='0.10.0' location='reference:file:/Users/kup/.bnd/cache/https%253A%252F%252Fgithub.com%252Fbndtools%252Fbundle-hub%252Fraw%252Fmaster%252Forg.apache.felix.gogo.shell/org.apache.felix.gogo.shell-0.10.0.jar' bsn='org.apache.felix.gogo.shell' modified='2014-02-01T15:01:06' state='32' id='12'/>
+    <bundle version='2.2.2' location='reference:file:/Users/kup/.bnd/cache/http%253A%252F%252Frepository.amdatu.org%252Fdependencies%252Forg.apache.felix.http.jetty/org.apache.felix.http.jetty-2.2.2.jar' bsn='org.apache.felix.http.jetty' modified='2014-02-01T15:01:06' state='32' id='13'/>
+    <bundle version='1.0.1' location='reference:file:/Users/kup/.bnd/cache/https%253A%252F%252Fgithub.com%252Fbndtools%252Fbundle-hub%252Fraw%252Fmaster%252Forg.apache.felix.log/org.apache.felix.log-1.0.1.jar' bsn='org.apache.felix.log' modified='2014-02-01T15:01:06' state='32' id='14'/>
+    <bundle version='1.0.6' location='reference:file:/Users/kup/.bnd/cache/http%253A%252F%252Frepository.amdatu.org%252Fdependencies%252Forg.apache.felix.metatype/org.apache.felix.metatype-1.0.6.jar' bsn='org.apache.felix.metatype' modified='2014-02-01T15:01:06' state='32' id='15'/>
+    <bundle version='1.6.2' location='reference:file:/Users/kup/.bnd/cache/https%253A%252F%252Fgithub.com%252Fbndtools%252Fbundle-hub%252Fraw%252Fmaster%252Forg.apache.felix.scr/org.apache.felix.scr-1.6.2.jar' bsn='org.apache.felix.scr' modified='2014-02-01T15:01:06' state='32' id='16'/>
+    <bundle version='3.1.8' location='reference:file:/Users/kup/.bnd/cache/https%253A%252F%252Fgithub.com%252Fbndtools%252Fbundle-hub%252Fraw%252Fmaster%252Forg.apache.felix.webconsole/org.apache.felix.webconsole-3.1.8.jar' bsn='org.apache.felix.webconsole' modified='2014-02-01T15:01:06' state='32' id='17'/>
+    <bundle version='5.0.0.201305092017' location='reference:file:/Users/kup/.bnd/cache/https%253A%252F%252Fgithub.com%252Fbndtools%252Fbundle-hub%252Fraw%252Fmaster%252Fosgi.cmpn/osgi.cmpn-5.0.0.jar' bsn='osgi.cmpn' modified='2014-02-01T15:01:06' state='32' id='18'/>
+    <bundle version='4.2.0.201003190513' location='reference:file:/Users/kup/.bnd/cache/https%253A%252F%252Fgithub.com%252Fbndtools%252Fbundle-hub%252Fraw%252Fmaster%252Fosgi.enterprise/osgi.enterprise-4.2.0.jar' bsn='osgi.enterprise' modified='2014-02-01T15:01:06' state='32' id='19'/>
+    <bundle version='4.3.0.201111022239' location='reference:file:/Users/kup/.bnd/cache/https%253A%252F%252Fgithub.com%252Fbndtools%252Fbundle-hub%252Fraw%252Fmaster%252Fosgi.residential/osgi.residential-4.3.0.jar' bsn='osgi.residential' modified='2014-02-01T15:01:06' state='32' id='20'/>
+  </bundles>
+  <testcase name='testExample' time='10.30' classname='org.example.tests.ExampleTest'>
+    <failure type='junit.framework.AssertionFailedError'><![CDATA[junit.framework.AssertionFailedError: Service instance could not be injected
+at junit.framework.Assert.fail(Assert.java:50)
+at org.amdatu.bndtools.test.BaseOSGiServiceTest.setUp(BaseOSGiServiceTest.java:80)
+at org.example.tests.ExampleTest.setUp(ExampleTest.java:21)
+at junit.framework.TestCase.runBare(TestCase.java:132)
+at junit.framework.TestResult$1.protect(TestResult.java:110)
+at junit.framework.TestResult.runProtected(TestResult.java:128)
+at junit.framework.TestResult.run(TestResult.java:113)
+at junit.framework.TestCase.run(TestCase.java:124)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at aQute.junit.Activator.test(Activator.java:258)
+at aQute.junit.Activator.automatic(Activator.java:149)
+at aQute.junit.Activator.run(Activator.java:83)
+at aQute.launcher.Launcher$4.call(Launcher.java:1090)
+at aQute.launcher.Launcher$4.call(Launcher.java:1088)
+at aQute.launcher.Launcher.run(Launcher.java:233)
+at aQute.launcher.Launcher.main(Launcher.java:89)
+]]>
+    </failure>
+    <system-out>
+      SETUP2
+    </system-out>
+  </testcase>
+</testsuite>

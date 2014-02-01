@@ -1,0 +1,74 @@
+-runfw:org.apache.felix.framework;version='[4,5)'
+-runee:JavaSE-1.7
+-runsystemcapabilities: ${native_capability}
+
+-resolve.effective: active
+
+ -runproperties:  \
+    tester.trace=true, \
+	tester.continuous=true, \
+	tester.dir=testdir
+	
+#
+# Since we use transactions, we need to override the VM's transaction
+# package since it is incomplete. 
+#
+
+-runpath: 	\
+	org.apache.geronimo.specs.geronimo-jta_1.1_spec;version=1.1.1
+
+
+-runbundles: \
+	ch.kup.flomi.domain;version=latest,\
+	ch.kup.flomi.integration;version=latest,\
+	ch.kup.flomi.integration.impl.test;version=latest,\
+	com.springsource.org.junit;version='[4.10.0,4.10.1)',\
+	javax.persistence;version='[2.1.0,2.1.1)',\
+	javax.servlet;version='[2.5.0,2.5.1)',\
+	org.amdatu.bndtools.test;version='[1.0.0,1.0.1)',\
+	org.apache.felix.configadmin;version='[1.8.0,1.8.1)',\
+	org.apache.felix.dependencymanager;version='[3.1.0,3.1.1)',\
+	org.apache.felix.gogo.command;version='[0.12.0,0.12.1)',\
+	org.apache.felix.gogo.runtime;version='[0.10.0,0.10.1)',\
+	org.apache.felix.gogo.shell;version='[0.10.0,0.10.1)',\
+	org.apache.felix.http.jetty;version='[2.2.2,2.2.3)',\
+	org.apache.felix.log;version='[1.0.1,1.0.2)',\
+	org.apache.felix.metatype;version='[1.0.6,1.0.7)',\
+	org.apache.felix.scr;version='[1.6.2,1.6.3)',\
+	org.apache.felix.webconsole;version='[3.1.8,3.1.9)',\
+	osgi.cmpn;version='[5.0.0,5.0.1)',\
+	osgi.enterprise;version='[4.2.0,4.2.1)',\
+	osgi.residential;version='[4.3.0,4.3.1)',\
+	org.eclipse.persistence.antlr,\
+	org.eclipse.persistence.asm,\
+	org.eclipse.persistence.core,\
+	org.eclipse.persistence.jpa,\
+	org.eclipse.persistence.jpa.jpql,\
+	org.ow2.bundles.ow2-util-log,\
+	org.ow2.jotm.core,\
+	org.ow2.util.i18n,\
+	osgi.jdbc.managed.aux,\
+	osgi.jpa.managed.aux,\
+	osgi.jpa.managed.eclipselink.adapter,\
+	osgi.jta.jotm.adapter,\
+	org.apache.geronimo.specs.geronimo-jta_1.1_spec,\
+	aQute.logger.intrf,\
+	org.apache.geronimo.specs.geronimo-j2ee-connector_1.6_spec,\
+	org.h2,\
+	aQute.configurer,\
+	ch.kup.flomi.integration.impl;version=latest
+
+-runrequires: \
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.webconsole)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.configadmin)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.metatype)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.log)',\
+	osgi.identity;filter:='(&(osgi.identity=osgi.cmpn)(version>=4.2))',\
+	osgi.identity;filter:='(&(osgi.identity=org.apache.felix.scr)(version>=1.6.0))',\
+	osgi.identity;filter:='(osgi.identity=ch.kup.flomi.integration.impl.test)',\
+	osgi.identity;filter:='(osgi.identity=org.apache.felix.http.jetty)'
+
+## Uncomment if you need to change the HTTP port
+#-runproperties: org.osgi.service.http.port=8080

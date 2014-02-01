@@ -4,4 +4,7 @@
 	<!-- -->
 
 	<import file="../cnf/build.xml" />
+	
+    <target name="build" depends="template.init,template.build, test"/>
+
 </project>

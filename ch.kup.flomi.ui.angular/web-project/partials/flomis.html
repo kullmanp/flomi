@@ -6,10 +6,10 @@
 		<th>Datum</th>
 		<th></th>
 	</tr>
-	<tr ng-repeat="flomi in flomis">
+	<tr ng-repeat="flomi in flomis | orderBy:'date':true">
 		<td>{{flomi.name}}</td>
-		<td>{{flomi.date}}</td>
-		<td><a href="#/flomis/edit/{{flomi._id}}" class="btn">Ändern</a></td>
+		<td>{{flomi.date | date:'d.M.yyyy'}}</td>
+		<td><a href="#/flomis/edit/{{flomi.id}}" class="btn">Ändern</a></td>
 	</tr>
 </table>
 

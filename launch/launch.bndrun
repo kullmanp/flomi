@@ -128,3 +128,5 @@
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.configadmin)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.http.jetty)',\
 	osgi.identity;filter:='(osgi.identity=aQute.configurer)'
+-runvm:-Djava.util.logging.config.file=/Users/kup/logging.properties\n\
+	

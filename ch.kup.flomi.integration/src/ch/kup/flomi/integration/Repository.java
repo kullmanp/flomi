@@ -15,7 +15,7 @@ public interface Repository<E, K> {
 
     E findById(K id);
 
-    E persist(E entity);
+    E save(E entity);
 
     void remove(E entity);
 }

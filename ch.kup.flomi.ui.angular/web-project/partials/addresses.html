@@ -1,0 +1,17 @@
+<a href="#/addresses/add" class="btn">Neue Adresse</a>
+
+<table class="table table-striped table-bordered">
+	<tr>
+		<th>Adressnummer</th>		
+		<th>Name</th>
+		<th>Ort</th>
+		<th></th>
+	</tr>
+	<tr ng-repeat="address in addresses">
+		<td>{{address.id}}</td>
+		<td>{{address.lastName}}</td>
+		<td>{{address.city}}</td>
+		<td><a href="#/addresses/edit/{{address.id}}" class="btn">Ändern</a></td>
+	</tr>
+</table>
+

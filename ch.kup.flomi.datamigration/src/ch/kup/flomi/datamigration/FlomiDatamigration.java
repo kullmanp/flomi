@@ -49,6 +49,8 @@ public class FlomiDatamigration {
 	}
 
 	private void migrateAddresses(Connection connection) throws SQLException {
+		if (addressRepository.findAll().size() > 0)
+			return;
 		Statement stmt = connection.createStatement();
 		ResultSet resultSet = stmt.executeQuery("select * from \"Adressen\"");
 		while (resultSet.next()) {
@@ -88,14 +90,14 @@ public class FlomiDatamigration {
 		adr.setSalutation(rs.getString("Anrede"));
 		adr.setTitle(rs.getString("Titel"));
 		adr.setZip(rs.getString("Postleitzahl"));
-		addressRepository.persist(adr);
+		addressRepository.save(adr);
 	}
 
 	private void createFlomi(ResultSet rs) throws SQLException {
 		Flomi flomi = new Flomi();
 		flomi.setName(rs.getString("ID"));
 		flomi.setDate(rs.getDate("Datum"));
-		flomiRepository.persist(flomi);
+		flomiRepository.save(flomi);
 	}
 
 	@Reference
