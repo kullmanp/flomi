@@ -2,12 +2,15 @@ package ch.kup.flomi.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.TableGenerator;
 
 @Entity
 public class Address extends TrackedEntity<Long> {
 	@Id
-	@GeneratedValue
+	@TableGenerator(name = "ADDRESS", allocationSize = 1, initialValue = 2000)
+	@GeneratedValue(generator = "ADDRESS", strategy = GenerationType.TABLE)
 	private Long id;
 
 	private String salutation;
