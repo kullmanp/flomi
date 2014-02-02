@@ -20,7 +20,7 @@ var EditAddressesCtrl = ['$scope', '$http', '$routeParams', '$location', functio
 			});	
 		} else {
 			$http.put('/address/' + $routeParams.addressId, $scope.address).success(function() {
-				$location.path('/addresses/edit/' + $routeParams.id);
+				$location.path('/addresses');
 			});	
 		}
 	}

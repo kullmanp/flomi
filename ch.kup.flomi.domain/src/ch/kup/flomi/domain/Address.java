@@ -1,5 +1,6 @@
 package ch.kup.flomi.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,6 +13,9 @@ public class Address extends TrackedEntity<Long> {
 	@TableGenerator(name = "ADDRESS", allocationSize = 1, initialValue = 2000)
 	@GeneratedValue(generator = "ADDRESS", strategy = GenerationType.TABLE)
 	private Long id;
+
+	@Column(unique = true)
+	private Long addressNumber;
 
 	private String salutation;
 	private String title;
@@ -37,6 +41,10 @@ public class Address extends TrackedEntity<Long> {
 
 	public String getAddress2() {
 		return address2;
+	}
+
+	public Long getAddressNumber() {
+		return addressNumber;
 	}
 
 	public String getBirthday() {
@@ -102,6 +110,10 @@ public class Address extends TrackedEntity<Long> {
 
 	public void setAddress2(String address2) {
 		this.address2 = address2;
+	}
+
+	public void setAddressNumber(Long addressNumber) {
+		this.addressNumber = addressNumber;
 	}
 
 	public void setBirthday(String birthday) {

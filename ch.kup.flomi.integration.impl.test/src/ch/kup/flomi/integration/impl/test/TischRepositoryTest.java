@@ -5,14 +5,14 @@ import javax.transaction.TransactionManager;
 import org.amdatu.bndtools.test.BaseOSGiServiceTest;
 import org.junit.Test;
 
-import ch.kup.flomi.integration.FlomiRepository;
+import ch.kup.flomi.integration.TischRepository;
 
-public class FlomiRepositoryTest extends BaseOSGiServiceTest<FlomiRepository> {
+public class TischRepositoryTest extends BaseOSGiServiceTest<TischRepository> {
 
 	private TransactionManager transactionManager;
 
-	public FlomiRepositoryTest() {
-		super(FlomiRepository.class);
+	public TischRepositoryTest() {
+		super(TischRepository.class);
 	}
 
 	@Override

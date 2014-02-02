@@ -1,16 +1,14 @@
 package ch.kup.flomi.domain;
 
-import java.util.Date;
+import java.math.BigDecimal;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 @Entity
-public class Flomi extends TrackedEntity<Long> {
+public class Tisch extends TrackedEntity<Long> {
 	@Id
 	@GeneratedValue
 	private Long id;
@@ -18,12 +16,8 @@ public class Flomi extends TrackedEntity<Long> {
 	@Column(unique = true)
 	private String name;
 
-	@Temporal(TemporalType.DATE)
-	private Date date;
-
-	public Date getDate() {
-		return date;
-	}
+	@Column(scale = 2, precision = 10)
+	private BigDecimal preis;
 
 	@Override
 	public Long getId() {
@@ -34,8 +28,8 @@ public class Flomi extends TrackedEntity<Long> {
 		return name;
 	}
 
-	public void setDate(Date date) {
-		this.date = date;
+	public BigDecimal getPreis() {
+		return preis;
 	}
 
 	@Override
@@ -47,9 +41,8 @@ public class Flomi extends TrackedEntity<Long> {
 		this.name = name;
 	}
 
-	@Override
-	public String toString() {
-		return "Flomi[" + getId() + ", name=" + name + "]";
+	public void setPreis(BigDecimal preis) {
+		this.preis = preis;
 	}
 
 }
