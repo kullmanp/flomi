@@ -44,31 +44,11 @@
 	org.eclipse.persistence.core,\
 	org.eclipse.persistence.jpa,\
 	org.eclipse.persistence.jpa.jpql,\
-	org.ow2.bundles.ow2-util-log,\
-	org.ow2.jotm.core,\
-	org.ow2.util.i18n,\
-	osgi.jdbc.managed.aux,\
-	osgi.jpa.managed.aux,\
-	osgi.jpa.managed.eclipselink.adapter,\
-	osgi.jta.jotm.adapter,\
-	org.apache.geronimo.specs.geronimo-jta_1.1_spec,\
 	aQute.logger.intrf,\
-	org.apache.geronimo.specs.geronimo-j2ee-connector_1.6_spec,\
 	org.h2,\
 	aQute.configurer,\
-	ch.kup.flomi.integration.impl;version=latest
+	ch.kup.flomi.integration.impl;version=latest,\
+	org.eclipse.gemini.jpa,\
+	ch.kup.jpa.support.support;version=latest
 
--runrequires: \
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.webconsole)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.configadmin)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.metatype)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.log)',\
-	osgi.identity;filter:='(&(osgi.identity=osgi.cmpn)(version>=4.2))',\
-	osgi.identity;filter:='(&(osgi.identity=org.apache.felix.scr)(version>=1.6.0))',\
-	osgi.identity;filter:='(osgi.identity=ch.kup.flomi.integration.impl.test)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.http.jetty)'
-
-## Uncomment if you need to change the HTTP port
-#-runproperties: org.osgi.service.http.port=8080
+-runproperties: org.osgi.service.http.port=8081

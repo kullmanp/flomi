@@ -1,31 +1,18 @@
 package ch.kup.flomi.integration.impl.test;
 
-import javax.transaction.TransactionManager;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.List;
 
-import org.amdatu.bndtools.test.BaseOSGiServiceTest;
 import org.junit.Test;
 
+import ch.kup.flomi.domain.Flomi;
 import ch.kup.flomi.integration.FlomiRepository;
 
-public class FlomiRepositoryTest extends BaseOSGiServiceTest<FlomiRepository> {
-
-	private TransactionManager transactionManager;
+public class FlomiRepositoryTest extends BaseTransactionTest<FlomiRepository> {
 
 	public FlomiRepositoryTest() {
 		super(FlomiRepository.class);
-	}
-
-	@Override
-	public void setUp() throws Exception {
-		super.setUp();
-		transactionManager = getService(TransactionManager.class);
-		transactionManager.begin();
-	}
-
-	@Override
-	protected void tearDown() throws Exception {
-		transactionManager.rollback();
-		super.tearDown();
 	}
 
 	@Test
@@ -36,5 +23,37 @@ public class FlomiRepositoryTest extends BaseOSGiServiceTest<FlomiRepository> {
 	@Test
 	public void testFindByName() throws Exception {
 		instance.findByName("test");
+	}
+
+	@Test
+	public void testGetAllYears() throws Exception {
+		List<Integer> years = instance.getAllYears();
+		assertEquals(0, years.size());
+
+		Flomi flomi1 = new Flomi();
+		flomi1.setDate(new GregorianCalendar(2011, Calendar.JANUARY, 1)
+				.getTime());
+		instance.save(flomi1);
+
+		years = instance.getAllYears();
+		assertEquals(1, years.size());
+		assertEquals(2011, years.get(0).intValue());
+
+		Flomi flomi2 = new Flomi();
+		flomi2.setDate(new GregorianCalendar(2012, Calendar.JANUARY, 1)
+				.getTime());
+		instance.save(flomi2);
+
+		years = instance.getAllYears();
+		assertEquals(2, years.size());
+
+		// another one of the same year
+		Flomi flomi3 = new Flomi();
+		flomi3.setDate(new GregorianCalendar(2012, Calendar.JANUARY, 1)
+				.getTime());
+		instance.save(flomi3);
+
+		years = instance.getAllYears();
+		assertEquals(2, years.size());
 	}
 }

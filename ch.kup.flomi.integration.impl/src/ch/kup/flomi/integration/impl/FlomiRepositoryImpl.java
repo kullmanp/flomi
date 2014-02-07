@@ -1,5 +1,6 @@
 package ch.kup.flomi.integration.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -21,6 +22,20 @@ public class FlomiRepositoryImpl extends BaseRepository<Flomi, Long> implements
 		query.setParameter("name", name);
 		List<Flomi> list = query.getResultList();
 		return list.size() == 0 ? null : list.get(0);
+	}
+
+	@Override
+	public List<Integer> getAllYears() {
+		TypedQuery<Number> query = entityManager
+				.createQuery(
+						"select distinct sql('extract(year from ?)', f.date) from Flomi f",
+						Number.class);
+		List<Number> resultList = query.getResultList();
+		List<Integer> res = new ArrayList<Integer>(resultList.size());
+		for (Number number : resultList) {
+			res.add(number.intValue());
+		}
+		return res;
 	}
 
 	@Reference

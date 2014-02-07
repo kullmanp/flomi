@@ -47,7 +47,9 @@
 	ch.kup.flomi.app;version=latest,\
 	ch.kup.jpa.support.filter;version=latest,\
 	slf4j.api,\
-	slf4j.jdk14
+	slf4j.jdk14,\
+	ch.kup.flomi.service;version=latest,\
+	ch.kup.flomi.service.impl;version=latest
 
 	osgi.identity;filter:='(osgi.identity=ch.kup.flomi.domain)',\
 	osgi.identity;filter:='(osgi.identity=ch.kup.flomi.jtatests)',\

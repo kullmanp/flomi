@@ -12,11 +12,13 @@ import aQute.bnd.annotation.component.Component;
 import aQute.bnd.annotation.component.Reference;
 import ch.kup.flomi.domain.FlomiBuchung;
 import ch.kup.flomi.integration.FlomiBuchungRepository;
+import ch.kup.flomi.service.FlomiBuchungService;
 
 @Path("/rest/reservations")
 @Component(provide = Object.class)
 public class ReservationResource {
 	private FlomiBuchungRepository flomiBuchungRepository;
+	private FlomiBuchungService flomiBuchungService;
 
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
@@ -35,10 +37,22 @@ public class ReservationResource {
 		return flomiBuchungRepository;
 	}
 
+	@GET
+	@Path("years")
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<Integer> getAllYears() {
+		return flomiBuchungService.getAllYears();
+	}
+
 	@Reference
 	public void setAddressRepository(
 			FlomiBuchungRepository flomiBuchungRepository) {
 		this.flomiBuchungRepository = flomiBuchungRepository;
+	}
+
+	@Reference
+	public void setFlomiBuchungService(FlomiBuchungService flomiBuchungService) {
+		this.flomiBuchungService = flomiBuchungService;
 	}
 
 }

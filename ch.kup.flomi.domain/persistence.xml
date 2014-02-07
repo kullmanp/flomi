@@ -14,7 +14,7 @@
 
 		<properties>
 			<!-- EclipseLink specific properties -->
-			<property name="eclipselink.logging.level" value="INFO" />
+			<property name="eclipselink.logging.level" value="FINE" />
 
 			<!-- activate connectin pooling (see https://bugs.eclipse.org/bugs/show_bug.cgi?id=379397) -->
 			<property name="eclipselink.connection-pool.force-internal-pool"

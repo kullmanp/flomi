@@ -1,4 +1,4 @@
-package ch.kup.flomi.integration;
+package ch.kup.flomi.service;
 
 import java.util.List;
 
@@ -6,9 +6,11 @@ import aQute.bnd.annotation.ProviderType;
 import ch.kup.flomi.domain.Flomi;
 
 @ProviderType
-public interface FlomiRepository extends Repository<Flomi, Long> {
+public interface FlomiBuchungService {
 
-	Flomi findByName(String name);
-
+	/**
+	 * Gets all years for which there exists a {@link Flomi}.
+	 */
 	List<Integer> getAllYears();
+
 }

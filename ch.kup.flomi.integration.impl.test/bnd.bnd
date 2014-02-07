@@ -8,7 +8,7 @@
 	ch.kup.flomi.domain;version=latest,\
 	ch.kup.flomi.integration.impl;version=latest,\
 	com.springsource.org.junit,\
-	org.apache.geronimo.specs.geronimo-jta_1.1_spec
+	javax.persistence
 Test-Cases: \
 	${classes;ANNOTATION;org.junit.Test}
 -runvm:-ea

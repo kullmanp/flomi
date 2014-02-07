@@ -1,12 +1,11 @@
 [ 
     {
-        "service.factoryPid" : "osgi.jpa.managed.aux.JPAManager",
-        "service.pid" : "Wildcard",
-        "name" : "*"
-    }, {
-        "service.factoryPid" : "osgi.jdbc.managed.aux.XADataSourceFactory",
-        "service.pid" : "H2 Data Source",
-        "url" : "jdbc:h2:mem:db",
-        "dataSourceFactory.target" : "(osgi.jdbc.driver.class=org.h2.Driver)"
+        "service.factoryPid" : "gemini.jpa.punit",
+        "service.pid" : "flomi-gemini-punit",
+        "gemini.jpa.punit.name" : "flomi", 
+        "javax.persistence.jdbc.driver" : "org.h2.Driver",
+        "javax.persistence.jdbc.url" : "jdbc:h2:mem:db",
+        "javax.persistence.jdbc.user" : "",
+        "javax.persistence.jdbc.password" : ""
     }
 ]
