@@ -3,6 +3,7 @@ package ch.kup.jpa.support.filter;
 import java.io.IOException;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -35,19 +36,23 @@ public class TransactionFilter implements Filter {
 	public void doFilter(ServletRequest req, ServletResponse resp,
 			FilterChain next) throws IOException, ServletException {
 		logger.trace("TransactionFilter begin transaction");
-		em.getTransaction().begin();
+		EntityTransaction tx = em.getTransaction();
+		tx.begin();
 		try {
 			logger.trace("TransactionFilter about to do some work");
 			next.doFilter(req, resp);
 			logger.trace("TransactionFilter work done. About to commit the transaction");
-			em.getTransaction().commit();
+			tx.commit();
 			logger.trace("TransactionFilter Transaction successfully committed");
 		} catch (Exception e) {
 			logger.trace(
 					"TransactionFiler Exception encountered, going to roll back tx",
 					e);
-			em.getTransaction().rollback();
+			if (tx != null && tx.isActive())
+				tx.rollback();
 			throw new RuntimeException(e);
+		} finally {
+			em.close();
 		}
 	}
 

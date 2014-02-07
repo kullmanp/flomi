@@ -34,11 +34,10 @@ public class SharedEntityManager implements EntityManager {
 		getEM().clear();
 	}
 
-	/**
-	 * We automatically close so ignore.
-	 */
 	@Override
 	public void close() {
+		getEM().close();
+		perThreadEntityManager.remove();
 	}
 
 	@Override
@@ -140,32 +139,14 @@ public class SharedEntityManager implements EntityManager {
 		if (!open)
 			throw new IllegalStateException("The JPA bridge has closed");
 
-		try {
+		EntityManager em = perThreadEntityManager.get();
+		if (em != null)
+			return em;
 
-			//
-			// Do we already have one on this thread?
-			//
-			EntityManager em = perThreadEntityManager.get();
-			if (em != null)
-				return em;
+		em = emf.createEntityManager();
+		perThreadEntityManager.set(em);
 
-			em = emf.createEntityManager();
-			try {
-				//
-				// Make it available for later calls on this thread
-				//
-				perThreadEntityManager.set(em);
-
-				return em;
-
-			} catch (Exception e) {
-				em.close();
-				throw new IllegalStateException(
-						"Registering synchronization to close EM", e);
-			}
-		} catch (Exception e) {
-			throw new RuntimeException(e);
-		}
+		return em;
 	}
 
 	@Override
