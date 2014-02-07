@@ -16,3 +16,4 @@ Meta-Persistence: persistence.xml
 	{${Meta-Persistence}}
 
 DynamicImport-Package: *
+Bundle-Version:1.0.0

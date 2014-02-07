@@ -49,7 +49,6 @@
 	org.ow2.util.i18n;version='[2.0.0,2.0.1)',\
 	osgi.cmpn;version='[5.0.0,5.0.1)',\
 	osgi.enterprise;version='[4.2.0,4.2.1)',\
-	osgi.jdbc.managed.aux;version='[1.0.0,1.0.1)',\
 	osgi.jpa.managed.aux;version='[2.0.1,2.0.2)',\
 	osgi.jpa.managed.eclipselink.adapter;version='[1.0.0,1.0.1)',\
 	osgi.jta.jotm.adapter;version='[1.0.0,1.0.1)',\
@@ -63,7 +62,10 @@
 	ch.kup.flomi.ui.angular;version=latest,\
 	org.amdatu.web.resourcehandler,\
 	ch.kup.flomi.datamigration;version=latest,\
-	ch.kup.flomi.odb.driver;version=latest
+	ch.kup.flomi.odb.driver;version=latest,\
+	osgi.jdbc.managed.aux;version=1.0.2,\
+	org.apache.tomcat.jdbc,\
+	com.springsource.org.apache.juli.extras
 
 -runrequires: \
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\

@@ -12,7 +12,11 @@ Service-Component: \
 	osgi.jpa.managed.eclipselink.adapter,\
 	org.ow2.jotm.core,\
 	org.amdatu.web.rest.wink,\
-	osgi.jta.filter.aux
+	osgi.jta.filter.aux,\
+	org.apache.tomcat.jdbc,\
+	osgi.jdbc.managed.aux,\
+	osgi.jpa.managed.aux,\
+	osgi.jta.jotm.adapter
 Bundle-Version:0.0.0.${tstamp}
 Private-Package: \
 	org.example

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<repository increment='1391277375550' name='Local' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
+<repository increment='1391668619645' name='Local' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
   <resource>
     <capability namespace='osgi.identity'>
       <attribute name='osgi.identity' value='org.apache.felix.dependencymanager'/>
@@ -611,6 +611,106 @@
     <requirement namespace='osgi.wiring.package'>
       <directive name='filter' value='(osgi.wiring.package=org.xml.sax.helpers)'/>
     </requirement>
+  </resource>
+  <resource>
+    <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='org.apache.tomcat.jdbc'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='1.1.0.1'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='c5145f8f9babb0dea2729f16f615b30ee9bed1892e39b21b552f6042090b2418'/>
+      <attribute name='url' value='org.apache.tomcat.jdbc/org.apache.tomcat.jdbc-1.1.0.jar'/>
+      <attribute name='size' type='Long' value='129808'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='org.apache.tomcat.jdbc'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.1'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='org.apache.tomcat.jdbc'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.1'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.apache.tomcat.jdbc.naming'/>
+      <attribute name='version' type='Version' value='1.1.0.1'/>
+      <attribute name='bundle-symbolic-name' value='org.apache.tomcat.jdbc'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.1'/>
+      <directive name='uses' value='javax.naming,org.apache.juli.logging,javax.naming.spi'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.apache.tomcat.jdbc.pool'/>
+      <attribute name='version' type='Version' value='1.1.0.1'/>
+      <attribute name='bundle-symbolic-name' value='org.apache.tomcat.jdbc'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.1'/>
+      <directive name='uses' value='org.apache.juli.logging,javax.sql,org.apache.tomcat.jdbc.pool.jmx,javax.management,javax.naming,javax.naming.spi,org.apache.tomcat.jdbc.pool.interceptor'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.apache.tomcat.jdbc.pool.interceptor'/>
+      <attribute name='version' type='Version' value='1.1.0.1'/>
+      <attribute name='bundle-symbolic-name' value='org.apache.tomcat.jdbc'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.1'/>
+      <directive name='uses' value='org.apache.tomcat.jdbc.pool,org.apache.juli.logging,javax.management.openmbean,javax.management'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.apache.tomcat.jdbc.pool.jmx'/>
+      <attribute name='version' type='Version' value='1.1.0.1'/>
+      <attribute name='bundle-symbolic-name' value='org.apache.tomcat.jdbc'/>
+      <attribute name='bundle-version' type='Version' value='1.1.0.1'/>
+      <directive name='uses' value='org.apache.tomcat.jdbc.pool,org.apache.juli.logging,javax.management'/>
+    </capability>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=javax.management)(version&gt;=0.0.0))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=javax.management.openmbean)(version&gt;=0.0.0))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=javax.naming)(version&gt;=0.0.0))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=javax.naming.spi)(version&gt;=0.0.0))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=javax.sql)(version&gt;=0.0.0))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.apache.juli.logging)(version&gt;=0.0.0))'/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='com.springsource.org.apache.juli.extras'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='7.0.26'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='8190d74df8f0a1e2c8ea58ea74f4a386b7938e8c266117bdbac30074e444ece7'/>
+      <attribute name='url' value='com.springsource.org.apache.juli.extras/com.springsource.org.apache.juli.extras-7.0.26.jar'/>
+      <attribute name='size' type='Long' value='38703'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='com.springsource.org.apache.juli.extras'/>
+      <attribute name='bundle-version' type='Version' value='7.0.26'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='com.springsource.org.apache.juli.extras'/>
+      <attribute name='bundle-version' type='Version' value='7.0.26'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.apache.juli'/>
+      <attribute name='version' type='Version' value='7.0.26'/>
+      <attribute name='bundle-symbolic-name' value='com.springsource.org.apache.juli.extras'/>
+      <attribute name='bundle-version' type='Version' value='7.0.26'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.apache.juli.logging'/>
+      <attribute name='version' type='Version' value='7.0.26'/>
+      <attribute name='bundle-symbolic-name' value='com.springsource.org.apache.juli.extras'/>
+      <attribute name='bundle-version' type='Version' value='7.0.26'/>
+    </capability>
   </resource>
   <resource>
     <capability namespace='osgi.identity'>

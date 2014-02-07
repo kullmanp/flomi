@@ -9,6 +9,8 @@ angular.module('flomi', ['components']).
       when('/addresses/add', {templateUrl: 'partials/editaddress.html', controller: EditAddressesCtrl}).
       when('/addresses/edit/:addressId', {templateUrl: 'partials/editaddress.html', controller: EditAddressesCtrl}).
       
+      when('/reservations', {templateUrl: 'partials/reservations.html', controller: ReservationsCtrl}).
+
       otherwise({redirectTo: '/flomis'});
 }]);
 
