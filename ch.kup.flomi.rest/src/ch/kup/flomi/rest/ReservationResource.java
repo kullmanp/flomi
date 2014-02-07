@@ -33,6 +33,13 @@ public class ReservationResource {
 		return flomiBuchungRepository.findById(id);
 	}
 
+	@GET
+	@Path("years/{year}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<FlomiBuchung> findReservationsByYear(@PathParam("year") int year) {
+		return flomiBuchungRepository.findReservationsByYear(year);
+	}
+
 	public FlomiBuchungRepository getAddressRepository() {
 		return flomiBuchungRepository;
 	}
