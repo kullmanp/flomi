@@ -1,0 +1,14 @@
+[ 
+    {
+        "service.factoryPid" : "gemini.jpa.punit",
+        "service.pid" : "flomi-gemini-punit",
+        "gemini.jpa.punit.name" : "flomi",
+        "javax.persistence.jdbc.driver" : "com.mysql.jdbc.Driver",
+        "javax.persistence.jdbc.url" : "jdbc:mysql://localhost:3306/flomi?createDatabaseIfNotExist=true",
+        "javax.persistence.jdbc.user" : "root",
+        "javax.persistence.jdbc.password" : "root"
+    }, {
+    	"service.pid" : "ch.kup.jpa.support.filter.TransactionFilter",
+    	"pattern" : "/rest/.*"
+    }
+]

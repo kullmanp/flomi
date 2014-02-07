@@ -17,7 +17,7 @@ import aQute.bnd.annotation.component.Reference;
 import ch.kup.flomi.domain.Flomi;
 import ch.kup.flomi.integration.FlomiRepository;
 
-@Path("flomi")
+@Path("/rest/flomi")
 @Component(provide = Object.class)
 public class FlomiResource {
 	private FlomiRepository flomiRepository;

@@ -1,0 +1,11 @@
+Service-Component: \
+	*
+-buildpath: \
+	osgi.core,\
+	osgi.cmpn,\
+	biz.aQute.bnd.annotation,\
+	javax.persistence,\
+	javax.servlet,\
+	slf4j.api
+-sub: \
+	*.bnd

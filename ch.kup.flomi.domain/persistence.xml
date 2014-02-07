@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
     http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
 	version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
-	<persistence-unit name="flomi" transaction-type="JTA">
+	<persistence-unit name="flomi" transaction-type="RESOURCE_LOCAL">
 
 		<class>ch.kup.flomi.domain.Flomi</class>
 		<class>ch.kup.flomi.domain.Address</class>
@@ -14,7 +14,11 @@
 
 		<properties>
 			<!-- EclipseLink specific properties -->
-			<property name="eclipselink.logging.level" value="FINEST" />
+			<property name="eclipselink.logging.level" value="INFO" />
+
+			<!-- activate connectin pooling (see https://bugs.eclipse.org/bugs/show_bug.cgi?id=379397) -->
+			<property name="eclipselink.connection-pool.force-internal-pool"
+				value="true" />
 
 			<property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
 			<property name="eclipselink.ddl-generation.output-mode"

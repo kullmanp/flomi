@@ -5,7 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import javax.transaction.TransactionManager;
+import javax.persistence.EntityManager;
 
 import ch.kup.flomi.integration.Repository;
 
@@ -31,16 +31,16 @@ public abstract class SimpleTableMigrator<R extends Repository<E, K>, E, K> {
 		return repository;
 	}
 
-	public void migrate(Connection connection, TransactionManager txManager)
+	public void migrate(Connection connection, EntityManager em)
 			throws Exception {
 		try {
-			txManager.begin();
+			em.getTransaction().begin();
 			beforeMigration();
 			migrateInternal(connection);
-			txManager.commit();
+			em.getTransaction().commit();
 		} catch (Exception e) {
 			try {
-				txManager.rollback();
+				em.getTransaction().rollback();
 			} catch (Exception e2) {
 				// ignore this
 			}

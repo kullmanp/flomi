@@ -13,7 +13,7 @@ import aQute.bnd.annotation.component.Reference;
 import ch.kup.flomi.domain.FlomiBuchung;
 import ch.kup.flomi.integration.FlomiBuchungRepository;
 
-@Path("reservations")
+@Path("/rest/reservations")
 @Component(provide = Object.class)
 public class ReservationResource {
 	private FlomiBuchungRepository flomiBuchungRepository;

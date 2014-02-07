@@ -4,28 +4,16 @@
 
 -resolve.effective: active
 
-#
-# Since we use transactions, we need to override the VM's transaction
-# package since it is incomplete. 
-#
-
--runpath: 	\
-	org.apache.geronimo.specs.geronimo-jta_1.1_spec;version=1.1.1
-
-
-
 -runbundles: \
 	aQute.configurer;version='[1.0.1,1.0.2)',\
 	aQute.logger.intrf;version='[1.0.0,1.0.1)',\
 	ch.kup.flomi.domain;version=latest,\
 	ch.kup.flomi.integration;version=latest,\
 	ch.kup.flomi.integration.impl;version=latest,\
-	ch.kup.flomi.jtatests;version=latest,\
 	ch.kup.flomi.rest;version=latest,\
 	com.mysql.jdbc;version='[5.1.27,5.1.28)',\
 	javax.persistence;version='[2.1.0,2.1.1)',\
 	javax.servlet;version='[2.5.0,2.5.1)',\
-	org.amdatu.blobstores;version='[1.1.1,1.1.2)',\
 	org.apache.felix.configadmin;version='[1.8.0,1.8.1)',\
 	org.apache.felix.dependencymanager;version='[3.1.0,3.1.1)',\
 	org.apache.felix.gogo.command;version='[0.12.0,0.12.1)',\
@@ -36,71 +24,31 @@
 	org.apache.felix.log;version='[1.0.1,1.0.2)',\
 	org.apache.felix.scr;version='[1.6.2,1.6.3)',\
 	org.apache.felix.webconsole;version='[3.1.8,3.1.9)',\
-	org.apache.geronimo.specs.geronimo-j2ee-connector_1.6_spec;version='[1.0.0,1.0.1)',\
-	org.apache.geronimo.specs.geronimo-jta_1.1_spec;version='[1.1.1,1.1.2)',\
 	org.eclipse.persistence.antlr;version='[3.2.0,3.2.1)',\
 	org.eclipse.persistence.asm;version='[3.3.1,3.3.2)',\
 	org.eclipse.persistence.core;version='[2.5.1,2.5.2)',\
 	org.eclipse.persistence.jpa;version='[2.5.1,2.5.2)',\
 	org.eclipse.persistence.jpa.jpql;version='[2.5.1,2.5.2)',\
 	org.ops4j.pax.jdbc.mysql;version='[0.3.0,0.3.1)',\
-	org.ow2.bundles.ow2-util-log;version='[1.0.36,1.0.37)',\
-	org.ow2.jotm.core;version='[2.3.1,2.3.2)',\
-	org.ow2.util.i18n;version='[2.0.0,2.0.1)',\
 	osgi.cmpn;version='[5.0.0,5.0.1)',\
 	osgi.enterprise;version='[4.2.0,4.2.1)',\
-	osgi.jpa.managed.aux;version='[2.0.1,2.0.2)',\
-	osgi.jpa.managed.eclipselink.adapter;version='[1.0.0,1.0.1)',\
-	osgi.jta.jotm.adapter;version='[1.0.0,1.0.1)',\
 	osgi.residential;version='[4.3.0,4.3.1)',\
 	org.amdatu.web.rest.jaxrs;version='[1.0,1.1)',\
 	org.amdatu.web.rest.wink;version='[1.0,1.1)',\
 	jackson-jaxrs;version=1.9.8,\
 	jackson-core-asl;version=1.9.8,\
 	jackson-mapper-asl;version=1.9.8,\
-	osgi.jta.filter.aux,\
 	ch.kup.flomi.ui.angular;version=latest,\
 	org.amdatu.web.resourcehandler,\
 	ch.kup.flomi.datamigration;version=latest,\
 	ch.kup.flomi.odb.driver;version=latest,\
-	osgi.jdbc.managed.aux;version=1.0.2,\
-	org.apache.tomcat.jdbc,\
-	com.springsource.org.apache.juli.extras
+	org.eclipse.gemini.jpa,\
+	ch.kup.jpa.support.support;version=latest,\
+	ch.kup.flomi.app;version=latest,\
+	ch.kup.jpa.support.filter;version=latest,\
+	slf4j.api,\
+	slf4j.jdk14
 
--runrequires: \
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
-	osgi.identity;filter:='(osgi.identity=ch.kup.flomi.domain)',\
-	osgi.identity;filter:='(osgi.identity=ch.kup.flomi.jtatests)',\
-	osgi.identity;filter:='(osgi.identity=ch.kup.flomi.integration)',\
-	osgi.identity;filter:='(osgi.identity=ch.kup.flomi.integration.impl)',\
-	osgi.identity;filter:='(osgi.identity=ch.kup.flomi.rest)',\
-	osgi.identity;filter:='(osgi.identity=org.eclipse.persistence.antlr)',\
-	osgi.identity;filter:='(osgi.identity=org.eclipse.persistence.asm)',\
-	osgi.identity;filter:='(osgi.identity=org.eclipse.persistence.core)',\
-	osgi.identity;filter:='(osgi.identity=org.eclipse.persistence.jpa)',\
-	osgi.identity;filter:='(osgi.identity=org.eclipse.persistence.jpa.jpql)',\
-	osgi.identity;filter:='(osgi.identity=org.ow2.jotm.core)',\
-	osgi.identity;filter:='(osgi.identity=osgi.jta.jotm.adapter)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.geronimo.specs.geronimo-jta_1.1_spec)',\
-	osgi.identity;filter:='(osgi.identity=org.ow2.bundles.ow2-util-log)',\
-	osgi.identity;filter:='(osgi.identity=org.ow2.util.i18n)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.geronimo.specs.geronimo-j2ee-connector_1.6_spec)',\
-	osgi.identity;filter:='(osgi.identity=osgi.jpa.managed.aux)',\
-	osgi.identity;filter:='(osgi.identity=osgi.jpa.managed.eclipselink.adapter)',\
-	osgi.identity;filter:='(osgi.identity=osgi.jdbc.managed.aux)',\
-	osgi.identity;filter:='(osgi.identity=org.ops4j.pax.jdbc.mysql)',\
-	osgi.identity;filter:='(osgi.identity=com.mysql.jdbc)',\
-	osgi.identity;filter:='(osgi.identity=aQute.logger.intrf)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.webconsole)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.configadmin)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.http.jetty)',\
-	osgi.identity;filter:='(osgi.identity=aQute.configurer)',\
-	osgi.identity;filter:='(osgi.identity=org.apache.felix.http.whiteboard)',\
-	osgi.identity;filter:='(osgi.identity=org.amdatu.web.rest.jaxrs)',\
-	osgi.identity;filter:='(osgi.identity=org.amdatu.web.rest.wink)',\
-	osgi.identity;filter:='(osgi.identity=ch.kup.flomi.ui.angular)',\
-	osgi.identity;filter:='(osgi.identity=org.amdatu.web.resourcehandler)'
 	osgi.identity;filter:='(osgi.identity=ch.kup.flomi.domain)',\
 	osgi.identity;filter:='(osgi.identity=ch.kup.flomi.jtatests)',\
 	osgi.identity;filter:='(osgi.identity=ch.kup.flomi.integration)',\
@@ -121,7 +69,6 @@
 	osgi.identity;filter:='(osgi.identity=org.apache.geronimo.specs.geronimo-j2ee-connector_1.6_spec)',\
 	osgi.identity;filter:='(osgi.identity=osgi.jpa.managed.aux)',\
 	osgi.identity;filter:='(osgi.identity=osgi.jpa.managed.eclipselink.adapter)',\
-	osgi.identity;filter:='(osgi.identity=osgi.jdbc.managed.aux)',\
 	osgi.identity;filter:='(osgi.identity=org.ops4j.pax.jdbc.mysql)',\
 	osgi.identity;filter:='(osgi.identity=com.mysql.jdbc)',\
 \
@@ -130,5 +77,7 @@
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.configadmin)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.http.jetty)',\
 	osgi.identity;filter:='(osgi.identity=aQute.configurer)'
+
+
 -runvm:-Djava.util.logging.config.file=/Users/kup/logging.properties\n\
-	
+

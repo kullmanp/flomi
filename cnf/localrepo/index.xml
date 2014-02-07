@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<repository increment='1391668619645' name='Local' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
+<repository increment='1391767367964' name='Local' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
   <resource>
     <capability namespace='osgi.identity'>
       <attribute name='osgi.identity' value='org.apache.felix.dependencymanager'/>
@@ -619,9 +619,9 @@
       <attribute name='version' type='Version' value='1.1.0.1'/>
     </capability>
     <capability namespace='osgi.content'>
-      <attribute name='osgi.content' value='c5145f8f9babb0dea2729f16f615b30ee9bed1892e39b21b552f6042090b2418'/>
+      <attribute name='osgi.content' value='6363c6ef2245d991dcd012fa5d25839ddc471f01e71fe8f91cfd1b05d5197f35'/>
       <attribute name='url' value='org.apache.tomcat.jdbc/org.apache.tomcat.jdbc-1.1.0.jar'/>
-      <attribute name='size' type='Long' value='129808'/>
+      <attribute name='size' type='Long' value='129867'/>
       <attribute name='mime' value='application/vnd.osgi.bundle'/>
     </capability>
     <capability namespace='osgi.wiring.bundle'>
@@ -677,6 +677,9 @@
     </requirement>
     <requirement namespace='osgi.wiring.package'>
       <directive name='filter' value='(&amp;(osgi.wiring.package=org.apache.juli.logging)(version&gt;=0.0.0))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.transaction.xa)'/>
     </requirement>
   </resource>
   <resource>
@@ -3009,6 +3012,40 @@
   </resource>
   <resource>
     <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='slf4j.jdk14'/>
+      <attribute name='type' value='osgi.fragment'/>
+      <attribute name='version' type='Version' value='1.7.5'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='ff3d390db50d3655b7ddf5f2471530d187d476b992ccddf264368d9092524ee3'/>
+      <attribute name='url' value='slf4j.jdk14/slf4j.jdk14-1.7.5.jar'/>
+      <attribute name='size' type='Long' value='7900'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.slf4j.impl'/>
+      <attribute name='version' type='Version' value='1.7.5'/>
+      <attribute name='bundle-symbolic-name' value='slf4j.jdk14'/>
+      <attribute name='bundle-version' type='Version' value='1.7.5'/>
+    </capability>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.slf4j)(version&gt;=1.7.5))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.slf4j.spi)(version&gt;=1.7.5))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.slf4j.helpers)(version&gt;=1.7.5))'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.host'>
+      <directive name='filter' value='(&amp;(osgi.wiring.host=slf4j.api)(bundle-version&gt;=0.0.0))'/>
+    </requirement>
+    <requirement namespace='osgi.ee'>
+      <directive name='filter' value='(&amp;(osgi.ee=JavaSE)(version=1.3))'/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace='osgi.identity'>
       <attribute name='osgi.identity' value='osgi.jdbc.managed.aux'/>
       <attribute name='type' value='osgi.bundle'/>
       <attribute name='version' type='Version' value='1.0.0.201310100648'/>
@@ -3361,6 +3398,51 @@
     </capability>
     <requirement namespace='osgi.ee'>
       <directive name='filter' value='(&amp;(osgi.ee=JavaSE)(version=1.5))'/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='slf4j.api'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='1.7.5'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='fe30825245d2336c859dc38d60c0fc5f3668dbf29cd586828d2b5667ec355b91'/>
+      <attribute name='url' value='slf4j.api/slf4j.api-1.7.5.jar'/>
+      <attribute name='size' type='Long' value='26084'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='slf4j.api'/>
+      <attribute name='bundle-version' type='Version' value='1.7.5'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='slf4j.api'/>
+      <attribute name='bundle-version' type='Version' value='1.7.5'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.slf4j'/>
+      <attribute name='version' type='Version' value='1.7.5'/>
+      <attribute name='bundle-symbolic-name' value='slf4j.api'/>
+      <attribute name='bundle-version' type='Version' value='1.7.5'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.slf4j.spi'/>
+      <attribute name='version' type='Version' value='1.7.5'/>
+      <attribute name='bundle-symbolic-name' value='slf4j.api'/>
+      <attribute name='bundle-version' type='Version' value='1.7.5'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.slf4j.helpers'/>
+      <attribute name='version' type='Version' value='1.7.5'/>
+      <attribute name='bundle-symbolic-name' value='slf4j.api'/>
+      <attribute name='bundle-version' type='Version' value='1.7.5'/>
+    </capability>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(&amp;(osgi.wiring.package=org.slf4j.impl)(version&gt;=1.6.0))'/>
+    </requirement>
+    <requirement namespace='osgi.ee'>
+      <directive name='filter' value='(&amp;(osgi.ee=JavaSE)(version=1.3))'/>
     </requirement>
   </resource>
   <resource>

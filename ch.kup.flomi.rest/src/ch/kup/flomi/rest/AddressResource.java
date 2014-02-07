@@ -17,7 +17,7 @@ import aQute.bnd.annotation.component.Reference;
 import ch.kup.flomi.domain.Address;
 import ch.kup.flomi.integration.AddressRepository;
 
-@Path("address")
+@Path("/rest/address")
 @Component(provide = Object.class)
 public class AddressResource {
 	private AddressRepository addressRepository;

@@ -2,7 +2,7 @@ package ch.kup.flomi.datamigration;
 
 import java.sql.Connection;
 
-import javax.transaction.TransactionManager;
+import javax.persistence.EntityManager;
 
 import aQute.bnd.annotation.component.Component;
 import aQute.bnd.annotation.component.Reference;
@@ -16,9 +16,10 @@ import ch.kup.flomi.odb.driver.OdbJdbcDriver;
 public class FlomiDatamigration {
 	private FlomiRepository flomiRepository;
 	private AddressRepository addressRepository;
-	private TransactionManager txManager;
 	private TischRepository tischRepository;
 	private FlomiBuchungRepository flomiBuchungRepository;
+
+	private EntityManager em;
 
 	public void activate() throws Exception {
 		try {
@@ -37,15 +38,14 @@ public class FlomiDatamigration {
 				":jdbc:odb:file:///Users/kup/Desktop/Flomi.odb", null);
 		try {
 			new FlomiMigrator(flomiRepository, "select * from \"Flomis\"")
-					.migrate(connection, txManager);
+					.migrate(connection, em);
 			new AddressMigrator(addressRepository, "select * from \"Adressen\"")
-					.migrate(connection, txManager);
+					.migrate(connection, em);
 			new TischMigrator(tischRepository, "select * from \"Tische\"")
-					.migrate(connection, txManager);
+					.migrate(connection, em);
 			new FlomiBuchungMigrator(flomiBuchungRepository,
 					"select * from \"Buchungen\"", addressRepository,
-					flomiRepository, tischRepository).migrate(connection,
-					txManager);
+					flomiRepository, tischRepository).migrate(connection, em);
 		} finally {
 			connection.close();
 		}
@@ -54,6 +54,11 @@ public class FlomiDatamigration {
 	@Reference
 	public void setAddressRepository(AddressRepository addressRepository) {
 		this.addressRepository = addressRepository;
+	}
+
+	@Reference
+	public void setEm(EntityManager em) {
+		this.em = em;
 	}
 
 	@Reference
@@ -70,11 +75,6 @@ public class FlomiDatamigration {
 	@Reference
 	public void setTischRepository(TischRepository tischRepository) {
 		this.tischRepository = tischRepository;
-	}
-
-	@Reference
-	public void setTxManager(TransactionManager txManager) {
-		this.txManager = txManager;
 	}
 
 }
