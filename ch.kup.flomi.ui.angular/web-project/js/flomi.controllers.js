@@ -1,5 +1,5 @@
 var FlomisCtrl = ['$scope', '$http', function($scope, $http) {
-	$http.get('/rest/flomi').success(function(flomis) {
+	$http.get('/rest/flomis').success(function(flomis) {
 		$scope.flomis = flomis;
 	});		
 }];	
@@ -7,26 +7,26 @@ var FlomisCtrl = ['$scope', '$http', function($scope, $http) {
 var EditFlomisCtrl = ['$scope', '$http', '$routeParams', '$location', function($scope, $http, $routeParams, $location) {
 	
 	if($routeParams.flomiId != undefined) {
-		$http.get('/rest/flomi/' + $routeParams.flomiId).success(function(flomi) {
+		$http.get('/rest/flomis/' + $routeParams.flomiId).success(function(flomi) {
 			$scope.flomi = flomi;
 		});	
 	}
 
 	$scope.save = function() {
 		if ($scope.flomi.id == undefined) {
-			$http.post('/rest/flomi', $scope.flomi).success(function(newFlomi) {
+			$http.post('/rest/flomis', $scope.flomi).success(function(newFlomi) {
 				$scope.flomi = newFlomi;
 				$location.path('/flomis');
 			});	
 		} else {
-			$http.put('/rest/flomi/' + $routeParams.flomiId, $scope.flomi).success(function() {
+			$http.put('/rest/flomis/' + $routeParams.flomiId, $scope.flomi).success(function() {
 				$location.path('/flomis');
 			});	
 		}
 	}
 
 	$scope.delete = function() {
-		$http.delete('/rest/flomi/' + $routeParams.flomiId).success(function() {
+		$http.delete('/rest/flomis/' + $routeParams.flomiId).success(function() {
 			$location.path('/flomis');
 		});
 	}

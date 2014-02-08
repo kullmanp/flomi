@@ -26,6 +26,17 @@ public class FlomiRepositoryTest extends BaseTransactionTest<FlomiRepository> {
 	}
 
 	@Test
+	public void testFindByYear() throws Exception {
+		Flomi flomi1 = new Flomi();
+		flomi1.setDate(new GregorianCalendar(2011, Calendar.JANUARY, 1)
+				.getTime());
+		instance.save(flomi1);
+
+		assertEquals(0, instance.findByYear(2099).size());
+		assertEquals(1, instance.findByYear(2011).size());
+	}
+
+	@Test
 	public void testGetAllYears() throws Exception {
 		List<Integer> years = instance.getAllYears();
 		assertEquals(0, years.size());

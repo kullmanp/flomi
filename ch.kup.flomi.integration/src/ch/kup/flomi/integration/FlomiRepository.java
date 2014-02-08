@@ -10,5 +10,7 @@ public interface FlomiRepository extends Repository<Flomi, Long> {
 
 	Flomi findByName(String name);
 
+	List<Flomi> findByYear(int year);
+
 	List<Integer> getAllYears();
 }

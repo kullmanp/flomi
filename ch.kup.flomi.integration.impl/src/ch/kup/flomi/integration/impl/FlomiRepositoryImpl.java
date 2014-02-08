@@ -25,6 +25,16 @@ public class FlomiRepositoryImpl extends BaseRepository<Flomi, Long> implements
 	}
 
 	@Override
+	public List<Flomi> findByYear(int year) {
+		TypedQuery<Flomi> query = entityManager
+				.createQuery(
+						"select f from Flomi f where sql('extract(year from ?)', f.date) = :year",
+						Flomi.class);
+		query.setParameter("year", year);
+		return query.getResultList();
+	}
+
+	@Override
 	public List<Integer> getAllYears() {
 		TypedQuery<Number> query = entityManager
 				.createQuery(
