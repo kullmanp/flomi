@@ -1,4 +1,4 @@
-angular.module('flomi', ['components']).
+angular.module('flomi', ['components', 'ui.bootstrap']).
   config(['$routeProvider', function($routeProvider) {
   $routeProvider.
       when('/flomis', {templateUrl: 'partials/flomis.html', controller: FlomisCtrl}).
@@ -10,6 +10,8 @@ angular.module('flomi', ['components']).
       when('/addresses/edit/:addressId', {templateUrl: 'partials/editaddress.html', controller: EditAddressesCtrl}).
       
       when('/reservations', {templateUrl: 'partials/reservations.html', controller: ReservationsCtrl}).
+      when('/reservations/add', {templateUrl: 'partials/editreservation.html', controller: EditReservationsCtrl}).
+      when('/reservations/edit/:reservationId', {templateUrl: 'partials/editreservation.html', controller: EditReservationsCtrl}).
 
       otherwise({redirectTo: '/flomis'});
 }]);

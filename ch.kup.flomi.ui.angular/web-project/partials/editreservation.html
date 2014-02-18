@@ -1,0 +1,41 @@
+<h2>Flomi Reservation</h2>
+<div class="">Flomi: <a ng-href='#/flomis/edit/{{flomi.id}}'>{{flomi.name}} ({{flomi.date}})</a></div>
+<div class="">Tisch: {{tisch.name}}</div>
+<div class="">Anmeldung: {{reservation.anmeldeDatum | date:'d.M.yyyy'}}</div>
+<form class="form-horizontal">
+  <div class="control-group">
+    <label class="control-label" for="inputID">ID</label>
+    <div class="controls">
+      <input type="text" id="inputID" readonly placeholder="ID" ng-model="reservation.id">
+    </div>
+  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="inputAddress">Adresse</label>
+    <div class="controls">
+      <input type="text" id="inputAddress" placeholder="Suche nach Adresse" ng-model="selectedAddress"
+		typeahead="address as address.lastName for address in findAddresses($viewValue)" 
+		typeahead-loading="loadingAddresses" typeahead-template-url="itemTpl.html">
+		<i ng-show="loadingAddresses" class="glyphicon glyphicon-refresh">LOADING...</i>
+		<div ng-class="small" ng-show="selectedAddress.addressNumber > 0">{{selectedAddress.addressNumber + ': ' + selectedAddress.firstName + ' ' + selectedAddress.lastName + ', ' + selectedAddress.city}} </div>
+    </div> 
+  </div>
+
+  <div class="control-group">
+    <div class="controls">
+      <div class="btn btn-primary" ng-click="save()">Save</div>
+      <div class="btn btn-danger" ng-click="delete()">Delete</div>
+      <a href="#/reservations" class="btn">Cancel</a>
+    </div>
+  </div>
+</form>
+
+<script type="text/ng-template" id="itemTpl.html">
+   <a tabindex="-1">
+      <span ng-bind-html-unsafe="match.model.firstName + ' ' + match.model.lastName"></span>
+	  <small><span ng-bind-html-unsafe="'(' + match.model.addressNumber + ')'"></span></small>      
+	  <br/>
+	  <small><span ng-class="small" ng-bind-html-unsafe="match.model.address + ', ' + match.model.zip + ' ' + match.model.city" /></small>
+   </a>
+</script>
+

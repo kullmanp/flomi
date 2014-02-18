@@ -1,0 +1,4 @@
+
+
+/* styles for ui-bootstrap (see http://angular-ui.github.io/bootstrap/#/getting_started) */
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }

@@ -12,7 +12,7 @@
 		<td>{{table.name}}</td>
 
 		<td ng-repeat="flomi in flomis | orderBy:'date':false"
-			ng-click="go('/reservations/gugus')">{{ reservationText(flomi, table) }}</td>
+			ng-click="accessReservation(flomi, table)">{{ reservationText(flomi, table) }}</td>
 	</tr>
 </table>
 
