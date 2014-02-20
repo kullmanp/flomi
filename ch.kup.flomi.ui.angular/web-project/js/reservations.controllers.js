@@ -65,29 +65,41 @@ var EditReservationsCtrl = ['$scope', '$http', '$routeParams', '$location', func
 		});
 	};
 	
-	$scope.titles = [
-	                 {title: 'Amazing Grace', type: 'movie'},
-	                 {title: 'Amazing Grace', type: 'song'}
-	               ];	
-	
 	if($routeParams.reservationId != undefined) {
 		$http.get('/rest/reservations/' + $routeParams.reservationId).success(function(reservation) {
 			$scope.reservation = reservation;
-			$scope.tisch = reservation.tisch;
-			$scope.flomi = reservation.flomi;
 		});	
 	} else {
+		$scope.reservation = {};
 		$http.get('/rest/tables/' + $routeParams['table']).success(function(table){
-			$scope.tisch = table;
+			$scope.reservation.tisch = table;
 		});
 		$http.get('/rest/flomis/' + $routeParams['flomi']).success(function(flomi){
-			$scope.flomi = flomi;
+			$scope.reservation.flomi = flomi;
 		});
 		
-		var dummyRes = {};
-		dummyRes.anmeldeDatum = new Date();
-		$scope.reservation = dummyRes;
+		$scope.reservation.anmeldeDatum = new Date();
 	}
 
+	
+	$scope.save = function() {
+		if ($scope.reservation.id == undefined) {
+			$http.post('/rest/reservations', $scope.reservation).success(function(newReservation) {
+				$scope.reservation = newReservation;
+				$location.path('/reservations');
+			});	
+		} else {
+			$http.put('/rest/reservations/' + $routeParams.reservationId, $scope.reservation).success(function() {
+				$location.path('/reservations');
+			});	
+		}
+	}
+
+	$scope.delete = function() {
+		$http.delete('/rest/reservations/' + $routeParams.reservationId).success(function() {
+			$location.path('/reservations');
+		});
+	}
+	
 }];
 

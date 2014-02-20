@@ -1,33 +1,66 @@
 <h2>Flomi Reservation</h2>
-<div class="">Flomi: <a ng-href='#/flomis/edit/{{flomi.id}}'>{{flomi.name}} ({{flomi.date}})</a></div>
-<div class="">Tisch: {{tisch.name}}</div>
-<div class="">Anmeldung: {{reservation.anmeldeDatum | date:'d.M.yyyy'}}</div>
 <form class="form-horizontal">
-  <div class="control-group">
-    <label class="control-label" for="inputID">ID</label>
-    <div class="controls">
-      <input type="text" id="inputID" readonly placeholder="ID" ng-model="reservation.id">
-    </div>
-  </div>
 
-  <div class="control-group">
-    <label class="control-label" for="inputAddress">Adresse</label>
-    <div class="controls">
-      <input type="text" id="inputAddress" placeholder="Suche nach Adresse" ng-model="selectedAddress"
-		typeahead="address as address.lastName for address in findAddresses($viewValue)" 
-		typeahead-loading="loadingAddresses" typeahead-template-url="itemTpl.html">
-		<i ng-show="loadingAddresses" class="glyphicon glyphicon-refresh">LOADING...</i>
-		<div ng-class="small" ng-show="selectedAddress.addressNumber > 0">{{selectedAddress.addressNumber + ': ' + selectedAddress.firstName + ' ' + selectedAddress.lastName + ', ' + selectedAddress.city}} </div>
-    </div> 
-  </div>
+	<div class="control-group">
+		<label class="control-label" for="inputID">ID</label>
+		<div class="controls">
+			<input type="text" id="inputID" readonly placeholder="ID"
+				ng-model="reservation.id">
+		</div>
+	</div>
 
-  <div class="control-group">
-    <div class="controls">
-      <div class="btn btn-primary" ng-click="save()">Save</div>
-      <div class="btn btn-danger" ng-click="delete()">Delete</div>
-      <a href="#/reservations" class="btn">Cancel</a>
-    </div>
-  </div>
+
+	<div class="control-group">
+		<div class="control-label">Flomi</div>
+		<div class="controls">
+			<a ng-href='#/flomis/edit/{{reservation.flomi.id}}'>{{reservation.flomi.name}}
+				({{reservation.flomi.date}})</a>
+		</div>
+	</div>
+
+	<div class="control-group">
+		<div class="control-label">Tisch</div>
+		<div class="controls">
+			<input type="text" readonly ng-model="reservation.tisch.name">
+		</div>
+	</div>
+
+	<div class="control-group">
+		<div class="control-label">Anmeldung</div>
+		<div class="controls">
+			<input type="text" readonly ng-model="reservation.anmeldeDatum">
+		</div>
+	</div>
+
+	<div class="control-group">
+		<label class="control-label" for="inputAddress">Adresse</label>
+		<div class="controls">
+			<input type="text" id="inputAddress" placeholder="Suche nach Adresse"
+				ng-model="reservation.address"
+				typeahead="address as address.lastName for address in findAddresses($viewValue)"
+				typeahead-loading="loadingAddresses"
+				typeahead-template-url="itemTpl.html"> <i
+				ng-show="loadingAddresses" class="glyphicon glyphicon-refresh">LOADING...</i>
+			<div ng-class="small" ng-show="reservation.address.addressNumber > 0">{{reservation.address.addressNumber
+				+ ': ' + reservation.address.firstName + ' ' + reservation.address.lastName
+				+ ', ' + reservation.address.city}}</div>
+		</div>
+	</div>
+
+	<div class="control-group">
+		<div class="control-label">Faktura</div>
+		<div class="controls">
+			<input type="text" readonly ng-model="reservation.fakturaNr">
+		</div>
+	</div>
+
+	<div class="control-group">
+		<div class="controls">
+			<div class="btn btn-primary" ng-click="save()">Save</div>
+			<div class="btn btn-danger" ng-click="delete()">Delete</div>
+			<a href="#/reservations" class="btn">Cancel</a>
+		</div>
+	</div>
 </form>
 
 <script type="text/ng-template" id="itemTpl.html">
