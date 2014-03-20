@@ -49,7 +49,8 @@
 	slf4j.api,\
 	slf4j.jdk14,\
 	ch.kup.flomi.service;version=latest,\
-	ch.kup.flomi.service.impl;version=latest
+	ch.kup.flomi.service.impl;version=latest,\
+	org.hsqldb.hsqldb
 
 	osgi.identity;filter:='(osgi.identity=ch.kup.flomi.domain)',\
 	osgi.identity;filter:='(osgi.identity=ch.kup.flomi.jtatests)',\

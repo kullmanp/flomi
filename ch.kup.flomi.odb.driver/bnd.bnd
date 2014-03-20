@@ -1,8 +1,6 @@
 Bundle-Version:0.0.0.${tstamp}
-Include-Resource: hsqldb.jar
-Bundle-ClassPath: ., hsqldb.jar
 -buildpath: \
-	hsqldb.jar;version=file
+	org.hsqldb.hsqldb
 
 	
 Import-Package: sun.security.action;resolution:=optional, *

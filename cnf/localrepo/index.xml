@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<repository increment='1391786250347' name='Local' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
+<repository increment='1395295610548' name='Local' xmlns='http://www.osgi.org/xmlns/repository/v1.0.0'>
   <resource>
     <capability namespace='osgi.identity'>
       <attribute name='osgi.identity' value='org.apache.felix.dependencymanager'/>
@@ -144,6 +144,405 @@
     </requirement>
     <requirement namespace='osgi.ee'>
       <directive name='filter' value='(&amp;(osgi.ee=JavaSE)(version=1.6))'/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace='osgi.identity'>
+      <attribute name='osgi.identity' value='org.hsqldb.hsqldb'/>
+      <attribute name='type' value='osgi.bundle'/>
+      <attribute name='version' type='Version' value='2.3.2'/>
+    </capability>
+    <capability namespace='osgi.content'>
+      <attribute name='osgi.content' value='e743f27f9e846bf66fec2e26d574dc11f7d1a16530aed8bf687fe1786a7c2ec6'/>
+      <attribute name='url' value='org.hsqldb.hsqldb/org.hsqldb.hsqldb-2.3.2.jar'/>
+      <attribute name='size' type='Long' value='1473091'/>
+      <attribute name='mime' value='application/vnd.osgi.bundle'/>
+    </capability>
+    <capability namespace='osgi.wiring.bundle'>
+      <attribute name='osgi.wiring.bundle' value='org.hsqldb.hsqldb'/>
+      <attribute name='bundle-version' type='Version' value='2.3.2'/>
+    </capability>
+    <capability namespace='osgi.wiring.host'>
+      <attribute name='osgi.wiring.host' value='org.hsqldb.hsqldb'/>
+      <attribute name='bundle-version' type='Version' value='2.3.2'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.hsqldb'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='org.hsqldb.hsqldb'/>
+      <attribute name='bundle-version' type='Version' value='2.3.2'/>
+      <directive name='uses' value='org.hsqldb.server,org.hsqldb.jdbc,org.hsqldb.types,org.hsqldb.rowio,org.hsqldb.result,org.hsqldb.persist,org.hsqldb.error,org.hsqldb.navigator,org.hsqldb.map,org.hsqldb.lib,org.hsqldb.rights,org.hsqldb.index,org.hsqldb.dbinfo,org.hsqldb.lib.java,org.hsqldb.scriptio'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.hsqldb.auth'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='org.hsqldb.hsqldb'/>
+      <attribute name='bundle-version' type='Version' value='2.3.2'/>
+      <directive name='uses' value='org.hsqldb.types,org.hsqldb.jdbc,org.hsqldb.lib,javax.security.auth.callback,javax.security.auth.login,javax.security.auth,javax.naming.directory,javax.naming,javax.naming.ldap,javax.net.ssl'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.hsqldb.dbinfo'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='org.hsqldb.hsqldb'/>
+      <attribute name='bundle-version' type='Version' value='2.3.2'/>
+      <directive name='uses' value='org.hsqldb.rights,org.hsqldb.resources,org.hsqldb,org.hsqldb.map,org.hsqldb.persist,org.hsqldb.lib,org.hsqldb.types,org.hsqldb.result,org.hsqldb.index'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.hsqldb.error'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='org.hsqldb.hsqldb'/>
+      <attribute name='bundle-version' type='Version' value='2.3.2'/>
+      <directive name='uses' value='org.hsqldb.resources,org.hsqldb,org.hsqldb.result,org.hsqldb.lib'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.hsqldb.index'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='org.hsqldb.hsqldb'/>
+      <attribute name='bundle-version' type='Version' value='2.3.2'/>
+      <directive name='uses' value='org.hsqldb.persist,org.hsqldb.types,org.hsqldb,org.hsqldb.navigator,org.hsqldb.rights,org.hsqldb.error,org.hsqldb.lib,org.hsqldb.rowio'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.hsqldb.jdbc'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='org.hsqldb.hsqldb'/>
+      <attribute name='bundle-version' type='Version' value='2.3.2'/>
+      <directive name='uses' value='org.hsqldb.types,org.hsqldb,org.hsqldb.navigator,org.hsqldb.result,org.hsqldb.lib.java,org.hsqldb.lib,org.hsqldb.error,javax.sql,org.hsqldb.persist,javax.naming,javax.naming.spi,org.hsqldb.jdbc.pool,javax.xml.parsers,org.w3c.dom,org.xml.sax,javax.xml.stream,javax.xml.transform.stax,javax.xml.transform.dom,org.w3c.dom.bootstrap,javax.xml.transform,javax.xml.bind.util,javax.xml.transform.stream,javax.xml.transform.sax'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.hsqldb.jdbc.pool'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='org.hsqldb.hsqldb'/>
+      <attribute name='bundle-version' type='Version' value='2.3.2'/>
+      <directive name='uses' value='javax.sql,org.hsqldb.jdbc,org.hsqldb.lib,javax.naming,javax.transaction.xa,org.hsqldb,org.hsqldb.error'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.hsqldb.lib'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='org.hsqldb.hsqldb'/>
+      <attribute name='bundle-version' type='Version' value='2.3.2'/>
+      <directive name='uses' value='org.hsqldb.lib.java,org.hsqldb.map,org.hsqldb'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.hsqldb.lib.java'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='org.hsqldb.hsqldb'/>
+      <attribute name='bundle-version' type='Version' value='2.3.2'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.hsqldb.lib.tar'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='org.hsqldb.hsqldb'/>
+      <attribute name='bundle-version' type='Version' value='2.3.2'/>
+      <directive name='uses' value='org.hsqldb.lib'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.hsqldb.lib.tar.rb'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='org.hsqldb.hsqldb'/>
+      <attribute name='bundle-version' type='Version' value='2.3.2'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.hsqldb.map'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='org.hsqldb.hsqldb'/>
+      <attribute name='bundle-version' type='Version' value='2.3.2'/>
+      <directive name='uses' value='org.hsqldb.lib,org.hsqldb.types'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.hsqldb.navigator'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='org.hsqldb.hsqldb'/>
+      <attribute name='bundle-version' type='Version' value='2.3.2'/>
+      <directive name='uses' value='org.hsqldb,org.hsqldb.error,org.hsqldb.rowio,org.hsqldb.result,org.hsqldb.types,org.hsqldb.lib,org.hsqldb.index,org.hsqldb.persist'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.hsqldb.persist'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='org.hsqldb.hsqldb'/>
+      <attribute name='bundle-version' type='Version' value='2.3.2'/>
+      <directive name='uses' value='org.hsqldb,org.hsqldb.error,org.hsqldb.map,org.hsqldb.rowio,org.hsqldb.lib,javax.crypto.spec,javax.crypto,org.hsqldb.scriptio,org.hsqldb.types,org.hsqldb.result,org.hsqldb.navigator,org.hsqldb.rights,org.hsqldb.index,org.hsqldb.lib.tar,org.hsqldb.dbinfo,org.hsqldb.lib.java'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.hsqldb.resources'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='org.hsqldb.hsqldb'/>
+      <attribute name='bundle-version' type='Version' value='2.3.2'/>
+      <directive name='uses' value='org.hsqldb.lib'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.hsqldb.result'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='org.hsqldb.hsqldb'/>
+      <attribute name='bundle-version' type='Version' value='2.3.2'/>
+      <directive name='uses' value='org.hsqldb.persist,org.hsqldb.types,org.hsqldb.error,org.hsqldb,org.hsqldb.navigator,org.hsqldb.map,org.hsqldb.rowio,org.hsqldb.lib'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.hsqldb.rights'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='org.hsqldb.hsqldb'/>
+      <attribute name='bundle-version' type='Version' value='2.3.2'/>
+      <directive name='uses' value='org.hsqldb.types,org.hsqldb.error,org.hsqldb,org.hsqldb.lib,org.hsqldb.result'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.hsqldb.rowio'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='org.hsqldb.hsqldb'/>
+      <attribute name='bundle-version' type='Version' value='2.3.2'/>
+      <directive name='uses' value='org.hsqldb.types,org.hsqldb.error,org.hsqldb,org.hsqldb.lib,org.hsqldb.map,org.hsqldb.persist'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.hsqldb.sample'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='org.hsqldb.hsqldb'/>
+      <attribute name='bundle-version' type='Version' value='2.3.2'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.hsqldb.scriptio'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='org.hsqldb.hsqldb'/>
+      <attribute name='bundle-version' type='Version' value='2.3.2'/>
+      <directive name='uses' value='org.hsqldb.persist,org.hsqldb,org.hsqldb.error,org.hsqldb.rowio,org.hsqldb.lib,org.hsqldb.types,org.hsqldb.map,org.hsqldb.result,org.hsqldb.navigator'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.hsqldb.server'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='org.hsqldb.hsqldb'/>
+      <attribute name='bundle-version' type='Version' value='2.3.2'/>
+      <directive name='uses' value='org.hsqldb.persist,org.hsqldb.jdbc,org.hsqldb.error,org.hsqldb,javax.net,javax.security.cert,javax.net.ssl,org.hsqldb.lib,org.hsqldb.types,org.hsqldb.result,org.hsqldb.resources,org.hsqldb.lib.java,org.hsqldb.map,org.hsqldb.rowio,org.hsqldb.navigator,javax.servlet,javax.servlet.http'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.hsqldb.types'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='org.hsqldb.hsqldb'/>
+      <attribute name='bundle-version' type='Version' value='2.3.2'/>
+      <directive name='uses' value='org.hsqldb.jdbc,org.hsqldb.error,org.hsqldb,org.hsqldb.lib,org.hsqldb.map,org.hsqldb.result,org.hsqldb.lib.java,org.hsqldb.persist,org.hsqldb.rights'/>
+    </capability>
+    <capability namespace='osgi.wiring.package'>
+      <attribute name='osgi.wiring.package' value='org.hsqldb.util'/>
+      <attribute name='version' type='Version' value='0.0.0'/>
+      <attribute name='bundle-symbolic-name' value='org.hsqldb.hsqldb'/>
+      <attribute name='bundle-version' type='Version' value='2.3.2'/>
+      <directive name='uses' value='javax.swing,javax.swing.border,org.hsqldb.lib.java,org.hsqldb.lib,javax.swing.tree,javax.swing.table,javax.swing.event'/>
+    </capability>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.crypto)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.crypto.spec)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.naming)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.naming.directory)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.naming.ldap)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.naming.spi)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.net)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.net.ssl)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.security.auth)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.security.auth.callback)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.security.auth.login)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.security.cert)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.servlet)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.servlet.http)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.sql)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.swing)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.swing.border)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.swing.event)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.swing.table)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.swing.tree)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.transaction.xa)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.xml.bind.util)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.xml.parsers)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.xml.stream)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.xml.transform)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.xml.transform.dom)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.xml.transform.sax)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.xml.transform.stax)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=javax.xml.transform.stream)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.hsqldb)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.hsqldb.auth)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.hsqldb.dbinfo)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.hsqldb.error)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.hsqldb.index)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.hsqldb.jdbc)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.hsqldb.jdbc.pool)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.hsqldb.lib)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.hsqldb.lib.java)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.hsqldb.lib.tar)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.hsqldb.lib.tar.rb)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.hsqldb.map)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.hsqldb.navigator)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.hsqldb.persist)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.hsqldb.resources)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.hsqldb.result)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.hsqldb.rights)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.hsqldb.rowio)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.hsqldb.sample)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.hsqldb.scriptio)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.hsqldb.server)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.hsqldb.types)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.hsqldb.util)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.w3c.dom)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.w3c.dom.bootstrap)'/>
+      <directive name='resolution' value='optional'/>
+    </requirement>
+    <requirement namespace='osgi.wiring.package'>
+      <directive name='filter' value='(osgi.wiring.package=org.xml.sax)'/>
+      <directive name='resolution' value='optional'/>
     </requirement>
   </resource>
   <resource>
